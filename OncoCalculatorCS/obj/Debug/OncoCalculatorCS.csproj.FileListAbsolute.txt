@@ -1,0 +1,12 @@
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe.config
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.pdb
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditDrug.resources
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditScheme.resources
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.MainForm.resources
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Properties.Resources.resources
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.GenerateResource.cache
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.CoreCompileInputs.cache
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.exe
+F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.pdb
