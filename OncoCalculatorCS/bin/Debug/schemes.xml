@@ -11,20 +11,6 @@
         <AUC>0</AUC>
         <currentDose>0</currentDose>
       </Drug>
-      <Drug>
-        <name>апрапр</name>
-        <description>апрапр</description>
-        <doseBSA>0</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>0</currentDose>
-      </Drug>
-      <Drug>
-        <name>qweqwe</name>
-        <description>qweqweqwe</description>
-        <doseBSA>0</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>0</currentDose>
-      </Drug>
     </drugsList>
   </Scheme>
   <Scheme>
@@ -34,13 +20,6 @@
       <Drug>
         <name>jhkhjk</name>
         <description>hjkhjk</description>
-        <doseBSA>0</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>0</currentDose>
-      </Drug>
-      <Drug>
-        <name>qweqwe</name>
-        <description>qweqweqwe</description>
         <doseBSA>0</doseBSA>
         <AUC>0</AUC>
         <currentDose>0</currentDose>

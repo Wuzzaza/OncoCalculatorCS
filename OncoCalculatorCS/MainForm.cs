@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using OncoCalculatorCS.Classes;
 using OncoCalculatorCS.Forms;
 using System.Drawing.Printing;
-
+using System.Web;
+using System.Xml;
+using System.Text;
 
 namespace OncoCalculatorCS
 {
@@ -22,6 +20,12 @@ namespace OncoCalculatorCS
         BindingList<Scheme> schemes;
         int selectedSchemeIndex;
         int selectedDrugIndex;
+        Scheme currentScheme;
+        int height;
+        int age;
+        int weight;
+        int creatinin;
+        double BSA = 0d;
 
         public MainForm()
         {
@@ -126,8 +130,18 @@ namespace OncoCalculatorCS
 
         private void schemesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            EditScheme editScheme = new EditScheme(schemes[(sender as DataGridView).CurrentRow.Index], drugs);
-            editScheme.ShowDialog(this);
+            if ((sender as DataGridView).CurrentRow.Index < schemes.Count)
+            {
+                try
+                {
+                    EditScheme editScheme = new EditScheme(schemes[(sender as DataGridView).CurrentRow.Index], drugs);
+                    editScheme.ShowDialog(this);
+                }
+
+                catch {
+
+                }
+            }
         }
 
         private void addScheme_Click(object sender, EventArgs e)
@@ -137,9 +151,12 @@ namespace OncoCalculatorCS
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             this.schemeCMBX.Refresh();
             this.schemesDataGridView.Refresh();
             this.drugsDataGridView.Refresh();
+            */
+
         }
 
         private void schemesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -172,6 +189,7 @@ namespace OncoCalculatorCS
             currentPatientSchemeGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
             currentPatientSchemeGridView.Columns["currentDose"].HeaderText = "Доза";
 
+            currentScheme = (schemeCMBX.SelectedItem as Scheme);
 
             currentPatientSchemeGridView.Refresh();
         }
@@ -194,13 +212,91 @@ namespace OncoCalculatorCS
 
         private void DocToPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
-
             using (Font header_font = new Font("Times New Roman", 12, FontStyle.Regular))
             {
-                String headerString = ("ФИО:  " + nameTBX.Text + "\n" +
-                                        "Возраст");
 
-                e.Graphics.DrawString(headerString, header_font, new SolidBrush(Color.Black) , new Point(10, 10));
+
+                StringBuilder headerString = 
+                    new StringBuilder("Рассчет дозы химиотерапии по схеме: " +
+                                      currentScheme.name + "\n");
+
+                headerString.Append ("ФИО:  " + nameTBX.Text + "\n");
+
+                if (height > 0) headerString.Append("Рост(см):  " + height + "\t");
+                if (weight > 0) headerString.Append("Вес(кг):  " + weight + "\t");
+                if (age > 0) headerString.Append("Возраст(лет):  " + age + "\t");
+
+                headerString.Append("\n");
+
+                if (height > 0 && weight >0) headerString.Append("Площадь поверхности тела (BSA)(м2):  " + BSA.ToString("0.##") + "\n");
+
+                e.Graphics.DrawString(headerString.ToString(), header_font, new SolidBrush(Color.Black), new Point(20, 20));
+            }
+
+            Bitmap bmp = new Bitmap(currentPatientSchemeGridView.Size.Width + 10, currentPatientSchemeGridView.Size.Height + 10);
+            currentPatientSchemeGridView.DrawToBitmap(bmp, new Rectangle(0, 0,
+                                                      currentPatientSchemeGridView.Width + 1,
+                                                      currentPatientSchemeGridView.Height));
+            e.Graphics.DrawImage(bmp, 15, 120);
+
+
+            
+            
+            
+        }
+
+        private void heightTBX_Leave(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(this.heightTBX.Text, out height))
+            {
+                this.heightTBX.BackColor = Color.White;
+                calculateBSA();
+
+            }
+            else
+            {
+                MessageBox.Show("Недопустимое значение роста");
+                this.heightTBX.BackColor = Color.LightCoral;
+
+            }
+        }
+
+        private void ageTBX_Leave(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(this.ageTBX.Text, out age))
+            {
+                this.ageTBX.BackColor = Color.White;
+                calculateBSA();
+
+            }
+            else
+            {
+                MessageBox.Show("Недопустимое значение возраста");
+                this.ageTBX.BackColor = Color.LightCoral;
+
+            }
+        }
+
+        private void weightTBX_Leave(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(this.weightTBX.Text, out weight))
+            {
+                this.weightTBX.BackColor = Color.White;
+                calculateBSA();
+            }
+            else
+            {
+                MessageBox.Show("Недопустимое значение веса");
+                this.weightTBX.BackColor = Color.LightCoral;
+
+            }
+        }
+
+        private void calculateBSA()
+        {
+            if (height > 0 && weight > 0)
+            {
+                BSA = Math.Sqrt(Convert.ToDouble(weight * height)/3600); 
             }
 
         }

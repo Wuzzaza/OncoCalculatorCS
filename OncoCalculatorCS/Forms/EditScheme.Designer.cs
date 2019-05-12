@@ -45,10 +45,10 @@
             this.currentSchemeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.currentSchemeDataGridView.Location = new System.Drawing.Point(16, 68);
             this.currentSchemeDataGridView.Name = "currentSchemeDataGridView";
+            this.currentSchemeDataGridView.ReadOnly = true;
             this.currentSchemeDataGridView.Size = new System.Drawing.Size(366, 329);
             this.currentSchemeDataGridView.TabIndex = 0;
             this.currentSchemeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.currentSchemeDataGridView_CellClick);
-            this.currentSchemeDataGridView.CurrentCellChanged += new System.EventHandler(this.currentSchemeDataGridView_CurrentCellChanged);
             // 
             // label1
             // 
@@ -87,6 +87,7 @@
             this.drugsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.drugsGridView.Location = new System.Drawing.Point(388, 68);
             this.drugsGridView.Name = "drugsGridView";
+            this.drugsGridView.ReadOnly = true;
             this.drugsGridView.Size = new System.Drawing.Size(400, 329);
             this.drugsGridView.TabIndex = 0;
             this.drugsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugsGridView_CellDoubleClick);

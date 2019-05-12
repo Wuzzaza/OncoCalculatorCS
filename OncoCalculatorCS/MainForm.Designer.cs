@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.printBTN = new System.Windows.Forms.Button();
             this.currentPatientSchemeGridView = new System.Windows.Forms.DataGridView();
             this.schemeCMBX = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.creatininTBX = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.weightTBX = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.ageTBX = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.heightTBX = new System.Windows.Forms.TextBox();
@@ -54,11 +57,8 @@
             this.addDrugButton = new System.Windows.Forms.Button();
             this.drugsDataGridView = new System.Windows.Forms.DataGridView();
             this.printDialog = new System.Windows.Forms.PrintDialog();
-            this.printBTN = new System.Windows.Forms.Button();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.weightTBX = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentPatientSchemeGridView)).BeginInit();
@@ -107,15 +107,28 @@
             this.tabPage1.Text = "Пациент";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // printBTN
+            // 
+            this.printBTN.Location = new System.Drawing.Point(670, 162);
+            this.printBTN.Name = "printBTN";
+            this.printBTN.Size = new System.Drawing.Size(75, 23);
+            this.printBTN.TabIndex = 8;
+            this.printBTN.Text = "Печать";
+            this.printBTN.UseVisualStyleBackColor = true;
+            this.printBTN.Click += new System.EventHandler(this.printBTN_Click);
+            // 
             // currentPatientSchemeGridView
             // 
             this.currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.currentPatientSchemeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.currentPatientSchemeGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.currentPatientSchemeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.currentPatientSchemeGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.currentPatientSchemeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.currentPatientSchemeGridView.Location = new System.Drawing.Point(11, 191);
             this.currentPatientSchemeGridView.Name = "currentPatientSchemeGridView";
             this.currentPatientSchemeGridView.Size = new System.Drawing.Size(734, 313);
-            this.currentPatientSchemeGridView.TabIndex = 3;
+            this.currentPatientSchemeGridView.TabIndex = 7;
             // 
             // schemeCMBX
             // 
@@ -123,7 +136,7 @@
             this.schemeCMBX.Location = new System.Drawing.Point(135, 164);
             this.schemeCMBX.Name = "schemeCMBX";
             this.schemeCMBX.Size = new System.Drawing.Size(248, 21);
-            this.schemeCMBX.TabIndex = 2;
+            this.schemeCMBX.TabIndex = 6;
             this.schemeCMBX.SelectedIndexChanged += new System.EventHandler(this.schemeCMBX_SelectedIndexChanged);
             // 
             // label6
@@ -144,7 +157,7 @@
             this.genderCMBX.Location = new System.Drawing.Point(135, 137);
             this.genderCMBX.Name = "genderCMBX";
             this.genderCMBX.Size = new System.Drawing.Size(121, 21);
-            this.genderCMBX.TabIndex = 2;
+            this.genderCMBX.TabIndex = 5;
             // 
             // label5
             // 
@@ -160,7 +173,7 @@
             this.creatininTBX.Location = new System.Drawing.Point(135, 110);
             this.creatininTBX.Name = "creatininTBX";
             this.creatininTBX.Size = new System.Drawing.Size(248, 20);
-            this.creatininTBX.TabIndex = 1;
+            this.creatininTBX.TabIndex = 4;
             // 
             // label4
             // 
@@ -171,12 +184,32 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Креатинин (мкмоль/л)";
             // 
+            // weightTBX
+            // 
+            this.weightTBX.Location = new System.Drawing.Point(135, 84);
+            this.weightTBX.Name = "weightTBX";
+            this.weightTBX.Size = new System.Drawing.Size(248, 20);
+            this.weightTBX.TabIndex = 3;
+            this.weightTBX.Text = "0";
+            this.weightTBX.Leave += new System.EventHandler(this.weightTBX_Leave);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Вес (кг)";
+            // 
             // ageTBX
             // 
             this.ageTBX.Location = new System.Drawing.Point(135, 58);
             this.ageTBX.Name = "ageTBX";
             this.ageTBX.Size = new System.Drawing.Size(248, 20);
-            this.ageTBX.TabIndex = 1;
+            this.ageTBX.TabIndex = 2;
+            this.ageTBX.Text = "0";
+            this.ageTBX.Leave += new System.EventHandler(this.ageTBX_Leave);
             // 
             // label3
             // 
@@ -193,6 +226,8 @@
             this.heightTBX.Name = "heightTBX";
             this.heightTBX.Size = new System.Drawing.Size(248, 20);
             this.heightTBX.TabIndex = 1;
+            this.heightTBX.Text = "0";
+            this.heightTBX.Leave += new System.EventHandler(this.heightTBX_Leave);
             // 
             // label2
             // 
@@ -208,7 +243,7 @@
             this.nameTBX.Location = new System.Drawing.Point(135, 6);
             this.nameTBX.Name = "nameTBX";
             this.nameTBX.Size = new System.Drawing.Size(248, 20);
-            this.nameTBX.TabIndex = 1;
+            this.nameTBX.TabIndex = 0;
             // 
             // label1
             // 
@@ -310,16 +345,6 @@
             // 
             this.printDialog.UseEXDialog = true;
             // 
-            // printBTN
-            // 
-            this.printBTN.Location = new System.Drawing.Point(670, 162);
-            this.printBTN.Name = "printBTN";
-            this.printBTN.Size = new System.Drawing.Size(75, 23);
-            this.printBTN.TabIndex = 4;
-            this.printBTN.Text = "Печать";
-            this.printBTN.UseVisualStyleBackColor = true;
-            this.printBTN.Click += new System.EventHandler(this.printBTN_Click);
-            // 
             // printPreviewDialog
             // 
             this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -334,22 +359,6 @@
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(OncoCalculatorCS.MainForm);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Вес (кг)";
-            // 
-            // weightTBX
-            // 
-            this.weightTBX.Location = new System.Drawing.Point(135, 84);
-            this.weightTBX.Name = "weightTBX";
-            this.weightTBX.Size = new System.Drawing.Size(248, 20);
-            this.weightTBX.TabIndex = 1;
             // 
             // MainForm
             // 

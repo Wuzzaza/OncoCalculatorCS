@@ -54,7 +54,7 @@
             this.nameTBX.Location = new System.Drawing.Point(79, 13);
             this.nameTBX.Name = "nameTBX";
             this.nameTBX.Size = new System.Drawing.Size(219, 20);
-            this.nameTBX.TabIndex = 1;
+            this.nameTBX.TabIndex = 0;
             // 
             // label2
             // 
@@ -86,7 +86,7 @@
             this.descriptionTBX.Location = new System.Drawing.Point(79, 65);
             this.descriptionTBX.Name = "descriptionTBX";
             this.descriptionTBX.Size = new System.Drawing.Size(219, 20);
-            this.descriptionTBX.TabIndex = 1;
+            this.descriptionTBX.TabIndex = 2;
             // 
             // label4
             // 
@@ -102,14 +102,14 @@
             this.AUCTBX.Location = new System.Drawing.Point(79, 91);
             this.AUCTBX.Name = "AUCTBX";
             this.AUCTBX.Size = new System.Drawing.Size(219, 20);
-            this.AUCTBX.TabIndex = 1;
+            this.AUCTBX.TabIndex = 3;
             // 
             // saveBTN
             // 
             this.saveBTN.Location = new System.Drawing.Point(12, 124);
             this.saveBTN.Name = "saveBTN";
             this.saveBTN.Size = new System.Drawing.Size(75, 23);
-            this.saveBTN.TabIndex = 2;
+            this.saveBTN.TabIndex = 4;
             this.saveBTN.Text = "Сохранить";
             this.saveBTN.UseVisualStyleBackColor = true;
             this.saveBTN.Click += new System.EventHandler(this.saveBTN_Click);
@@ -119,7 +119,7 @@
             this.button3.Location = new System.Drawing.Point(247, 124);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

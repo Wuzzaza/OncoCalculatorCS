@@ -79,10 +79,7 @@ namespace OncoCalculatorCS.Forms
 
         }
 
-        private void currentSchemeDataGridView_CurrentCellChanged(object sender, EventArgs e)
-        {
-        }
-
+        
         private void currentSchemeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = currentSchemeDataGridView.CurrentRow.Index;

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ArrayOfDrug xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Drug>
-    <name>asdasdqwe</name>
-    <description>asdasdasd</description>
-    <doseBSA>0</doseBSA>
+    <name>Фторурацил</name>
+    <description />
+    <doseBSA>200</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
   </Drug>
