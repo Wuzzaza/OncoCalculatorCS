@@ -15,7 +15,7 @@ namespace OncoCalculatorCS.Classes
         public int AUC { get; set; }
         public int currentDose { get; set; }
 
-        public Drug Copy() {
+        public Drug makeCopy() {
             Drug thisDrugCopy = new Drug();
             thisDrugCopy.name = this.name;
             thisDrugCopy.description = this.description;

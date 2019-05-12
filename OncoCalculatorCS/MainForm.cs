@@ -130,17 +130,13 @@ namespace OncoCalculatorCS
 
         private void schemesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ((sender as DataGridView).CurrentRow.Index < schemes.Count)
+            if ((sender as DataGridView).CurrentRow.Index < schemes.Count && 
+                (sender as DataGridView).CurrentRow !=null)
             {
-                try
-                {
+                
                     EditScheme editScheme = new EditScheme(schemes[(sender as DataGridView).CurrentRow.Index], drugs);
                     editScheme.ShowDialog(this);
-                }
-
-                catch {
-
-                }
+               
             }
         }
 
@@ -151,12 +147,10 @@ namespace OncoCalculatorCS
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*
+            
             this.schemeCMBX.Refresh();
             this.schemesDataGridView.Refresh();
             this.drugsDataGridView.Refresh();
-            */
-
         }
 
         private void schemesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

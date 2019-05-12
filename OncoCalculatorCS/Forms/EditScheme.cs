@@ -15,7 +15,6 @@ namespace OncoCalculatorCS.Forms
     {
         Scheme scheme;
         BindingList<Drug> drugs;
-        int selectedRow;
 
         public EditScheme(Scheme scheme, BindingList<Drug> drugs)
         {
@@ -51,8 +50,9 @@ namespace OncoCalculatorCS.Forms
 
         private void drugsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Drug newDrug = drugs[(sender as DataGridView).CurrentRow.Index].Copy();
+            Drug newDrug = drugs[(sender as DataGridView).CurrentRow.Index].makeCopy();
             this.scheme.drugsList.Add(newDrug);
+            currentSchemeDataGridView.Refresh();
         }
 
         private void saveBTN_Click(object sender, EventArgs e)
@@ -80,15 +80,14 @@ namespace OncoCalculatorCS.Forms
         }
 
         
-        private void currentSchemeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            selectedRow = currentSchemeDataGridView.CurrentRow.Index;
-        }
+       
 
         private void removeDrugBTN_Click(object sender, EventArgs e)
         {
-            if (selectedRow < scheme.drugsList.Count) scheme.drugsList.RemoveAt(selectedRow);
-
+            foreach (DataGridViewRow item in this.currentSchemeDataGridView.SelectedRows)
+            {
+                currentSchemeDataGridView.Rows.RemoveAt(item.Index);
+            }
         }
     }
 }

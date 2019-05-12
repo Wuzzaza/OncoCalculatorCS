@@ -119,6 +119,8 @@
             // 
             // currentPatientSchemeGridView
             // 
+            this.currentPatientSchemeGridView.AllowUserToAddRows = false;
+            this.currentPatientSchemeGridView.AllowUserToDeleteRows = false;
             this.currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.currentPatientSchemeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.currentPatientSchemeGridView.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -289,6 +291,8 @@
             // 
             // schemesDataGridView
             // 
+            this.schemesDataGridView.AllowUserToAddRows = false;
+            this.schemesDataGridView.AllowUserToDeleteRows = false;
             this.schemesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.schemesDataGridView.Location = new System.Drawing.Point(5, 5);
             this.schemesDataGridView.Name = "schemesDataGridView";
@@ -332,6 +336,8 @@
             // 
             // drugsDataGridView
             // 
+            this.drugsDataGridView.AllowUserToAddRows = false;
+            this.drugsDataGridView.AllowUserToDeleteRows = false;
             this.drugsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.drugsDataGridView.Location = new System.Drawing.Point(5, 5);
             this.drugsDataGridView.Name = "drugsDataGridView";

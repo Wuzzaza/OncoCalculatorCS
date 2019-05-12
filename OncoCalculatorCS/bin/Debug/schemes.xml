@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ArrayOfScheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Scheme>
-    <name>asdasd</name>
+    <name>vbnvbn</name>
     <intervalInDays>0</intervalInDays>
     <drugsList>
       <Drug>
@@ -11,15 +11,23 @@
         <AUC>0</AUC>
         <currentDose>0</currentDose>
       </Drug>
-    </drugsList>
-  </Scheme>
-  <Scheme>
-    <name>vbnvbn</name>
-    <intervalInDays>0</intervalInDays>
-    <drugsList>
       <Drug>
         <name>jhkhjk</name>
         <description>hjkhjk</description>
+        <doseBSA>0</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>qweqwe</name>
+        <description>qweqweqwe</description>
+        <doseBSA>0</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>qweqwe</name>
+        <description>qweqweqwe</description>
         <doseBSA>0</doseBSA>
         <AUC>0</AUC>
         <currentDose>0</currentDose>
