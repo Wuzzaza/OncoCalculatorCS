@@ -1,36 +1,90 @@
 <?xml version="1.0"?>
 <ArrayOfScheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Scheme>
-    <name>vbnvbn</name>
-    <intervalInDays>0</intervalInDays>
+    <name>FOLFOX-4</name>
+    <intervalInDays>14</intervalInDays>
     <drugsList>
       <Drug>
-        <name>jhkhjk</name>
-        <description>hjkhjk</description>
-        <doseBSA>0</doseBSA>
+        <name>Оксалиплатин</name>
+        <description />
+        <doseBSA>85</doseBSA>
         <AUC>0</AUC>
         <currentDose>0</currentDose>
       </Drug>
       <Drug>
-        <name>jhkhjk</name>
-        <description>hjkhjk</description>
-        <doseBSA>0</doseBSA>
+        <name>Лейковорин</name>
+        <description />
+        <doseBSA>200</doseBSA>
         <AUC>0</AUC>
         <currentDose>0</currentDose>
       </Drug>
       <Drug>
-        <name>qweqwe</name>
-        <description>qweqweqwe</description>
-        <doseBSA>0</doseBSA>
+        <name>Фторурацил</name>
+        <description />
+        <doseBSA>400</doseBSA>
         <AUC>0</AUC>
         <currentDose>0</currentDose>
       </Drug>
       <Drug>
-        <name>qweqwe</name>
-        <description>qweqweqwe</description>
-        <doseBSA>0</doseBSA>
+        <name>Фторурацил</name>
+        <description />
+        <doseBSA>600</doseBSA>
         <AUC>0</AUC>
         <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFOX-6</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <doseBSA>100</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>191</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <doseBSA>400</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>764</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <doseBSA>400</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>764</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <doseBSA>2400</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>4583</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>PC</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <doseBSA>175</doseBSA>
+        <AUC>0</AUC>
+        <currentDose>332</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <doseBSA>0</doseBSA>
+        <AUC>6</AUC>
+        <currentDose>623</currentDose>
       </Drug>
     </drugsList>
   </Scheme>

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -121,16 +123,29 @@
             // 
             this.currentPatientSchemeGridView.AllowUserToAddRows = false;
             this.currentPatientSchemeGridView.AllowUserToDeleteRows = false;
+            this.currentPatientSchemeGridView.AllowUserToResizeColumns = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.currentPatientSchemeGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.currentPatientSchemeGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.currentPatientSchemeGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.currentPatientSchemeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.currentPatientSchemeGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.currentPatientSchemeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.currentPatientSchemeGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.currentPatientSchemeGridView.Location = new System.Drawing.Point(11, 191);
             this.currentPatientSchemeGridView.Name = "currentPatientSchemeGridView";
+            this.currentPatientSchemeGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.currentPatientSchemeGridView.RowTemplate.DividerHeight = 1;
             this.currentPatientSchemeGridView.Size = new System.Drawing.Size(734, 313);
             this.currentPatientSchemeGridView.TabIndex = 7;
+            this.currentPatientSchemeGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.currentPatientSchemeGridView_CellEndEdit);
             // 
             // schemeCMBX
             // 
@@ -160,6 +175,7 @@
             this.genderCMBX.Name = "genderCMBX";
             this.genderCMBX.Size = new System.Drawing.Size(121, 21);
             this.genderCMBX.TabIndex = 5;
+            this.genderCMBX.SelectedIndexChanged += new System.EventHandler(this.genderCMBX_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -176,6 +192,8 @@
             this.creatininTBX.Name = "creatininTBX";
             this.creatininTBX.Size = new System.Drawing.Size(248, 20);
             this.creatininTBX.TabIndex = 4;
+            this.creatininTBX.Text = "0";
+            this.creatininTBX.Leave += new System.EventHandler(this.creatininTBX_Leave);
             // 
             // label4
             // 

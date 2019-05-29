@@ -25,7 +25,8 @@ namespace OncoCalculatorCS
         int age;
         int weight;
         int creatinin;
-        double BSA = 0d;
+        double BSA = 0d; // Body Surface Area
+        double GFR = 0d; // Glomerular Filtration Rate
 
         public MainForm()
         {
@@ -147,7 +148,9 @@ namespace OncoCalculatorCS
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            schemeCMBX.DataSource = schemes;
+            schemeCMBX.DisplayMember = "name";
+
             this.schemeCMBX.Refresh();
             this.schemesDataGridView.Refresh();
             this.drugsDataGridView.Refresh();
@@ -190,6 +193,8 @@ namespace OncoCalculatorCS
 
         private void printBTN_Click(object sender, EventArgs e)
         {
+            currentPatientSchemeGridView.ClearSelection();
+
             PrintDocument docToPrint = new PrintDocument();
 
             
@@ -222,21 +227,54 @@ namespace OncoCalculatorCS
 
                 headerString.Append("\n");
 
-                if (height > 0 && weight >0) headerString.Append("Площадь поверхности тела (BSA)(м2):  " + BSA.ToString("0.##") + "\n");
+                if (creatinin > 0) headerString.Append("Креатинин(мкмоль/л):  " + creatinin + "\t");
+                
+                headerString.Append("\n \n");
+
+                if (BSA > 0) headerString.Append("Площадь поверхности тела (BSA)(м2):  " + BSA.ToString("0.##") + "\n \n");
+                if (GFR > 0) headerString.Append("Скорость клубочковой фильтрации(СКФ)(мл/мин):  " + GFR.ToString("0.##") + "\n \n");
+
+
+                foreach (Drug drug in currentScheme.drugsList)
+                {
+                    if (drug.doseBSA > 0 && drug.AUC == 0 && this.BSA > 0)
+                    {
+                        headerString.Append(drug.name + "  Доза на м2 = " + drug.doseBSA.ToString()
+                                           + "мг. Доза = " + drug.doseBSA.ToString() + " * " + this.BSA.ToString("0.##")
+                                           + " = " + drug.currentDose.ToString() + "мг. \n");
+                    }
+
+                    if (drug.doseBSA == 0 && drug.AUC > 0 && this.GFR > 0)
+                    {
+                        headerString.Append(drug.name + " AUC = " + drug.AUC.ToString()
+                                           + ". Доза = " + drug.AUC.ToString() + " * (" + this.GFR.ToString("0.#")
+                                           + " + 25) = " + drug.currentDose.ToString() + "мг. \n");
+                    }
+                }
 
                 e.Graphics.DrawString(headerString.ToString(), header_font, new SolidBrush(Color.Black), new Point(20, 20));
             }
 
-            Bitmap bmp = new Bitmap(currentPatientSchemeGridView.Size.Width + 10, currentPatientSchemeGridView.Size.Height + 10);
+            /*
+            e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+            e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            System.Drawing.Imaging.ImageCodecInfo codec = System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders()[1];
+
+            System.Drawing.Imaging.EncoderParameters eParams = new System.Drawing.Imaging.EncoderParameters(1);
+
+            eParams.Param[0] = new System.Drawing.Imaging.EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L);
+
+
+            Bitmap bmp = new Bitmap((currentPatientSchemeGridView.Size.Width) * 4, 
+                                    (currentPatientSchemeGridView.Size.Height) * 4);
+            
             currentPatientSchemeGridView.DrawToBitmap(bmp, new Rectangle(0, 0,
-                                                      currentPatientSchemeGridView.Width + 1,
-                                                      currentPatientSchemeGridView.Height));
+                                                      currentPatientSchemeGridView.Width * 5,
+                                                      currentPatientSchemeGridView.Height * 5));
             e.Graphics.DrawImage(bmp, 15, 120);
-
-
-            
-            
-            
+            */
+                        
         }
 
         private void heightTBX_Leave(object sender, EventArgs e)
@@ -261,7 +299,7 @@ namespace OncoCalculatorCS
             {
                 this.ageTBX.BackColor = Color.White;
                 calculateBSA();
-
+                calculateGFR();
             }
             else
             {
@@ -277,6 +315,7 @@ namespace OncoCalculatorCS
             {
                 this.weightTBX.BackColor = Color.White;
                 calculateBSA();
+                calculateGFR();
             }
             else
             {
@@ -290,9 +329,79 @@ namespace OncoCalculatorCS
         {
             if (height > 0 && weight > 0)
             {
-                BSA = Math.Sqrt(Convert.ToDouble(weight * height)/3600); 
+                BSA = Math.Sqrt(Convert.ToDouble(weight * height)/3600);
+                recalculateDoses();
             }
 
+        }
+
+        private void calculateGFR()
+        {
+            if (age > 0 && weight > 0 && creatinin > 0)
+            {
+                if (genderCMBX.SelectedIndex == 0) {
+                    GFR = (1.23D * (Convert.ToDouble(140 - age)
+                           * Convert.ToDouble(weight)) / Convert.ToDouble(creatinin));
+                }
+
+                if (genderCMBX.SelectedIndex == 1)
+                {
+                    GFR = (1.05D * (Convert.ToDouble(140 - age)
+                           * Convert.ToDouble(weight)) / Convert.ToDouble(creatinin));
+                }
+
+                recalculateDoses();
+            }
+        }
+
+
+
+        private void creatininTBX_Leave(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(this.creatininTBX.Text, out creatinin))
+            {
+                this.creatininTBX.BackColor = Color.White;
+                calculateGFR();
+            }
+            else
+            {
+                MessageBox.Show("Недопустимое значение креатинина");
+                this.creatininTBX.BackColor = Color.LightCoral;
+
+            }
+
+            calculateGFR();
+        }
+
+        private void genderCMBX_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            calculateGFR();
+        }
+
+        private void recalculateDoses()
+        {
+            foreach (Drug drug in currentScheme.drugsList)
+            {
+                if (drug.doseBSA > 0 && drug.AUC == 0)
+                {
+                    if (BSA < 2)
+                        drug.currentDose = Convert.ToInt32(Convert.ToDouble(drug.doseBSA) * BSA);
+                    else
+                        drug.currentDose = drug.doseBSA * 2;
+
+                }
+
+                if (drug.doseBSA == 0 && drug.AUC > 0) {
+                    drug.currentDose = Convert.ToInt32(drug.AUC * (GFR + 25));
+                }
+            }
+
+            currentPatientSchemeGridView.Refresh();
+        }
+
+        private void currentPatientSchemeGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            recalculateDoses();
         }
     }
 }

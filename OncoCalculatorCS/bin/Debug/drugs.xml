@@ -8,23 +8,37 @@
     <currentDose>0</currentDose>
   </Drug>
   <Drug>
-    <name>jhkhjk</name>
-    <description>hjkhjk</description>
+    <name>Лейковорин</name>
+    <description />
     <doseBSA>0</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
   </Drug>
   <Drug>
-    <name>qweqwe</name>
-    <description>qweqweqwe</description>
+    <name>Оксалиплатин</name>
+    <description />
     <doseBSA>0</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
   </Drug>
   <Drug>
-    <name>qweqwe</name>
-    <description>qweqweqwe</description>
+    <name>Гемцитабин</name>
+    <description />
     <doseBSA>0</doseBSA>
+    <AUC>0</AUC>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Карбоплатин</name>
+    <description />
+    <doseBSA>0</doseBSA>
+    <AUC>5</AUC>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Паклитаксел</name>
+    <description />
+    <doseBSA>175</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
   </Drug>

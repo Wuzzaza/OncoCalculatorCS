@@ -23,6 +23,8 @@ namespace OncoCalculatorCS.Forms
             this.scheme = scheme;
             this.drugs = drugs;
 
+            this.Text = scheme.name;
+
             drugsGridView.DataSource = drugs;
             drugsGridView.ReadOnly = true;
             drugsGridView.Columns["currentDose"].Visible = false;

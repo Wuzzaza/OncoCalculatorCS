@@ -36,6 +36,8 @@
             this.drugsGridView = new System.Windows.Forms.DataGridView();
             this.saveBTN = new System.Windows.Forms.Button();
             this.removeDrugBTN = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.currentSchemeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugsGridView)).BeginInit();
             this.SuspendLayout();
@@ -45,10 +47,9 @@
             this.currentSchemeDataGridView.AllowUserToAddRows = false;
             this.currentSchemeDataGridView.AllowUserToDeleteRows = false;
             this.currentSchemeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.currentSchemeDataGridView.Location = new System.Drawing.Point(16, 68);
+            this.currentSchemeDataGridView.Location = new System.Drawing.Point(16, 97);
             this.currentSchemeDataGridView.Name = "currentSchemeDataGridView";
-            this.currentSchemeDataGridView.ReadOnly = true;
-            this.currentSchemeDataGridView.Size = new System.Drawing.Size(366, 329);
+            this.currentSchemeDataGridView.Size = new System.Drawing.Size(366, 300);
             this.currentSchemeDataGridView.TabIndex = 0;
             // 
             // label1
@@ -88,10 +89,10 @@
             this.drugsGridView.AllowUserToAddRows = false;
             this.drugsGridView.AllowUserToDeleteRows = false;
             this.drugsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.drugsGridView.Location = new System.Drawing.Point(388, 68);
+            this.drugsGridView.Location = new System.Drawing.Point(388, 97);
             this.drugsGridView.Name = "drugsGridView";
             this.drugsGridView.ReadOnly = true;
-            this.drugsGridView.Size = new System.Drawing.Size(400, 329);
+            this.drugsGridView.Size = new System.Drawing.Size(400, 300);
             this.drugsGridView.TabIndex = 0;
             this.drugsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugsGridView_CellDoubleClick);
             // 
@@ -115,11 +116,31 @@
             this.removeDrugBTN.UseVisualStyleBackColor = true;
             this.removeDrugBTN.Click += new System.EventHandler(this.removeDrugBTN_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Препараты схемы";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(385, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Добавить препарат";
+            // 
             // EditScheme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.removeDrugBTN);
             this.Controls.Add(this.saveBTN);
             this.Controls.Add(this.intervalTBX);
@@ -149,5 +170,7 @@
         private System.Windows.Forms.DataGridView drugsGridView;
         private System.Windows.Forms.Button saveBTN;
         private System.Windows.Forms.Button removeDrugBTN;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
