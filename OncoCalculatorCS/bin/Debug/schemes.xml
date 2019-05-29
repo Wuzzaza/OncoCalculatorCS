@@ -9,28 +9,28 @@
         <description />
         <doseBSA>85</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>170</currentDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
         <doseBSA>200</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>400</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <doseBSA>400</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>800</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <doseBSA>600</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>1200</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
@@ -77,14 +77,14 @@
         <description />
         <doseBSA>175</doseBSA>
         <AUC>0</AUC>
-        <currentDose>332</currentDose>
+        <currentDose>350</currentDose>
       </Drug>
       <Drug>
         <name>Карбоплатин</name>
         <description />
         <doseBSA>0</doseBSA>
-        <AUC>6</AUC>
-        <currentDose>623</currentDose>
+        <AUC>5</AUC>
+        <currentDose>500</currentDose>
       </Drug>
     </drugsList>
   </Scheme>

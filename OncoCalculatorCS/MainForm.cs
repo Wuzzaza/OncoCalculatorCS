@@ -16,6 +16,9 @@ namespace OncoCalculatorCS
 {
     public partial class MainForm : Form
     {
+        const int TOP_FIELD = 60;
+        const int LEFT_FIELD = 60;
+
         BindingList<Drug> drugs;
         BindingList<Scheme> schemes;
         int selectedSchemeIndex;
@@ -216,10 +219,13 @@ namespace OncoCalculatorCS
 
 
                 StringBuilder headerString = 
-                    new StringBuilder("Рассчет дозы химиотерапии по схеме: " +
+                    new StringBuilder("Расчет дозы химиотерапии по схеме: " +
                                       currentScheme.name + "\n");
 
-                headerString.Append ("ФИО:  " + nameTBX.Text + "\n");
+                headerString.Append ("ФИО пациента: " + nameTBX.Text + "\n \n");
+
+                headerString.Append("Дата: " + dateTimePicker1.Value.ToShortDateString() + "\n \n");
+
 
                 if (height > 0) headerString.Append("Рост(см):  " + height + "\t");
                 if (weight > 0) headerString.Append("Вес(кг):  " + weight + "\t");
@@ -252,7 +258,9 @@ namespace OncoCalculatorCS
                     }
                 }
 
-                e.Graphics.DrawString(headerString.ToString(), header_font, new SolidBrush(Color.Black), new Point(20, 20));
+                headerString.Append("\n \t Подпись врача:");
+
+                e.Graphics.DrawString(headerString.ToString(), header_font, new SolidBrush(Color.Black), new Point(LEFT_FIELD, TOP_FIELD));
             }
 
             /*
