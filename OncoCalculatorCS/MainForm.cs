@@ -338,6 +338,8 @@ namespace OncoCalculatorCS
             if (height > 0 && weight > 0)
             {
                 BSA = Math.Sqrt(Convert.ToDouble(weight * height)/3600);
+                if (BSA > 2.0D) BSA = 2.0D; 
+
                 recalculateDoses();
             }
 

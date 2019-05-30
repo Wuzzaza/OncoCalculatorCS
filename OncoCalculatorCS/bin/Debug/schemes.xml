@@ -84,7 +84,7 @@
         <description />
         <doseBSA>0</doseBSA>
         <AUC>5</AUC>
-        <currentDose>500</currentDose>
+        <currentDose>125</currentDose>
       </Drug>
     </drugsList>
   </Scheme>

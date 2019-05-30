@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.printBTN = new System.Windows.Forms.Button();
             this.currentPatientSchemeGridView = new System.Windows.Forms.DataGridView();
             this.schemeCMBX = new System.Windows.Forms.ComboBox();
@@ -49,6 +50,7 @@
             this.heightTBX = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTBX = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.drugsDataGridView = new System.Windows.Forms.DataGridView();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -112,6 +112,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Пациент";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(135, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // printBTN
             // 
@@ -269,6 +277,15 @@
             this.nameTBX.Size = new System.Drawing.Size(248, 20);
             this.nameTBX.TabIndex = 0;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(33, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Дата";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -383,23 +400,6 @@
             this.printPreviewDialog.Name = "printPreviewDialog";
             this.printPreviewDialog.UseAntiAlias = true;
             this.printPreviewDialog.Visible = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
-            this.dateTimePicker1.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Дата";
             // 
             // mainFormBindingSource
             // 
