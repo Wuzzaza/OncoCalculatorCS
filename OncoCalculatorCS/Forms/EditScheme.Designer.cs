@@ -66,7 +66,7 @@
             this.nameTBX.Location = new System.Drawing.Point(75, 13);
             this.nameTBX.Name = "nameTBX";
             this.nameTBX.Size = new System.Drawing.Size(100, 20);
-            this.nameTBX.TabIndex = 2;
+            this.nameTBX.TabIndex = 0;
             // 
             // label2
             // 
@@ -82,7 +82,7 @@
             this.intervalTBX.Location = new System.Drawing.Point(75, 39);
             this.intervalTBX.Name = "intervalTBX";
             this.intervalTBX.Size = new System.Drawing.Size(100, 20);
-            this.intervalTBX.TabIndex = 2;
+            this.intervalTBX.TabIndex = 1;
             // 
             // drugsGridView
             // 
@@ -101,7 +101,7 @@
             this.saveBTN.Location = new System.Drawing.Point(13, 415);
             this.saveBTN.Name = "saveBTN";
             this.saveBTN.Size = new System.Drawing.Size(75, 23);
-            this.saveBTN.TabIndex = 3;
+            this.saveBTN.TabIndex = 2;
             this.saveBTN.Text = "Сохранить";
             this.saveBTN.UseVisualStyleBackColor = true;
             this.saveBTN.Click += new System.EventHandler(this.saveBTN_Click);
@@ -111,7 +111,7 @@
             this.removeDrugBTN.Location = new System.Drawing.Point(307, 415);
             this.removeDrugBTN.Name = "removeDrugBTN";
             this.removeDrugBTN.Size = new System.Drawing.Size(75, 23);
-            this.removeDrugBTN.TabIndex = 5;
+            this.removeDrugBTN.TabIndex = 3;
             this.removeDrugBTN.Text = "Удалить";
             this.removeDrugBTN.UseVisualStyleBackColor = true;
             this.removeDrugBTN.Click += new System.EventHandler(this.removeDrugBTN_Click);

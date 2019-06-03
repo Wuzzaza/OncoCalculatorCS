@@ -221,7 +221,7 @@
             this.weightTBX.Location = new System.Drawing.Point(135, 84);
             this.weightTBX.Name = "weightTBX";
             this.weightTBX.Size = new System.Drawing.Size(248, 20);
-            this.weightTBX.TabIndex = 4;
+            this.weightTBX.TabIndex = 3;
             this.weightTBX.Text = "0";
             this.weightTBX.Leave += new System.EventHandler(this.weightTBX_Leave);
             // 
@@ -239,7 +239,7 @@
             this.ageTBX.Location = new System.Drawing.Point(135, 108);
             this.ageTBX.Name = "ageTBX";
             this.ageTBX.Size = new System.Drawing.Size(248, 20);
-            this.ageTBX.TabIndex = 3;
+            this.ageTBX.TabIndex = 4;
             this.ageTBX.Text = "0";
             this.ageTBX.Leave += new System.EventHandler(this.ageTBX_Leave);
             // 
