@@ -218,7 +218,7 @@
             // 
             // weightTBX
             // 
-            this.weightTBX.Location = new System.Drawing.Point(135, 110);
+            this.weightTBX.Location = new System.Drawing.Point(135, 84);
             this.weightTBX.Name = "weightTBX";
             this.weightTBX.Size = new System.Drawing.Size(248, 20);
             this.weightTBX.TabIndex = 4;
@@ -228,7 +228,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 110);
+            this.label7.Location = new System.Drawing.Point(8, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 0;
@@ -236,7 +236,7 @@
             // 
             // ageTBX
             // 
-            this.ageTBX.Location = new System.Drawing.Point(135, 84);
+            this.ageTBX.Location = new System.Drawing.Point(135, 108);
             this.ageTBX.Name = "ageTBX";
             this.ageTBX.Size = new System.Drawing.Size(248, 20);
             this.ageTBX.TabIndex = 3;
@@ -246,7 +246,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 84);
+            this.label3.Location = new System.Drawing.Point(8, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 0;

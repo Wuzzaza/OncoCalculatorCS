@@ -350,7 +350,7 @@ namespace OncoCalculatorCS
             if (age > 0 && weight > 0 && creatinin > 0)
             {
                 if (genderCMBX.SelectedIndex == 0) {
-                    GFR = (1.23D * (Convert.ToDouble(140 - age)
+                    GFR = (1.25D * (Convert.ToDouble(140 - age)
                            * Convert.ToDouble(weight)) / Convert.ToDouble(creatinin));
                 }
 
