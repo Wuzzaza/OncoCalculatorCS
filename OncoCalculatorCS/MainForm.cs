@@ -92,6 +92,9 @@ namespace OncoCalculatorCS
         private void addDrugButton_Click(object sender, EventArgs e)
         {
             drugs.Add(new Drug());
+            EditDrug editDrug = new EditDrug(drugs.Last());
+            editDrug.ShowDialog(this);
+
         }
 
         private void drugsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -147,6 +150,8 @@ namespace OncoCalculatorCS
         private void addScheme_Click(object sender, EventArgs e)
         {
             schemes.Add(new Scheme());
+            EditScheme editScheme = new EditScheme(schemes.Last(), drugs);
+            editScheme.ShowDialog(this);
         }
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
