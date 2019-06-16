@@ -14,6 +14,7 @@ namespace OncoCalculatorCS.Classes
         public int doseBSA { get; set; }
         public int AUC { get; set; }
         public int currentDose { get; set; }
+        public bool constantDose { get; set; }
 
         public Drug makeCopy() {
             Drug thisDrugCopy = new Drug();

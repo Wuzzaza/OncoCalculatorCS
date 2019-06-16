@@ -74,6 +74,7 @@ namespace OncoCalculatorCS
             drugsDataGridView.Columns["name"].HeaderText = "Название";
             drugsDataGridView.Columns["description"].HeaderText = "Описание";
             drugsDataGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
+            drugsDataGridView.Columns["constantDose"].HeaderText = "Фикс. доза";
 
             schemesDataGridView.DataSource = schemes;
 
@@ -193,6 +194,7 @@ namespace OncoCalculatorCS
             currentPatientSchemeGridView.Columns["description"].HeaderText = "Описание";
             currentPatientSchemeGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
             currentPatientSchemeGridView.Columns["currentDose"].HeaderText = "Доза";
+            currentPatientSchemeGridView.Columns["constantDose"].HeaderText = "Фикс. доза";
 
             currentScheme = (schemeCMBX.SelectedItem as Scheme);
 
@@ -248,6 +250,12 @@ namespace OncoCalculatorCS
 
                 foreach (Drug drug in currentScheme.drugsList)
                 {
+                    if (drug.constantDose)
+                    {
+                        headerString.Append(drug.name + "  Доза = " + drug.currentDose.ToString() + " мг. \n");
+                        continue;
+                    }
+
                     if (drug.doseBSA > 0 && drug.AUC == 0 && this.BSA > 0)
                     {
                         headerString.Append(drug.name + "  Доза на м2 = " + drug.doseBSA.ToString()
@@ -395,8 +403,15 @@ namespace OncoCalculatorCS
 
         private void recalculateDoses()
         {
+            
             foreach (Drug drug in currentScheme.drugsList)
             {
+                if (drug.constantDose)
+                {
+                    drug.currentDose = drug.doseBSA;
+                    continue;
+                }
+
                 if (drug.doseBSA > 0 && drug.AUC == 0)
                 {
                     if (BSA < 2)

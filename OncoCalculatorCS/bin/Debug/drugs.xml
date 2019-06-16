@@ -6,6 +6,7 @@
     <doseBSA>200</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
+    <constantDose>true</constantDose>
   </Drug>
   <Drug>
     <name>Лейковорин</name>
@@ -13,6 +14,7 @@
     <doseBSA>0</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
+    <constantDose>false</constantDose>
   </Drug>
   <Drug>
     <name>Оксалиплатин</name>
@@ -20,6 +22,7 @@
     <doseBSA>0</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
+    <constantDose>false</constantDose>
   </Drug>
   <Drug>
     <name>Гемцитабин</name>
@@ -27,6 +30,7 @@
     <doseBSA>0</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
+    <constantDose>false</constantDose>
   </Drug>
   <Drug>
     <name>Карбоплатин</name>
@@ -34,6 +38,7 @@
     <doseBSA>0</doseBSA>
     <AUC>5</AUC>
     <currentDose>0</currentDose>
+    <constantDose>false</constantDose>
   </Drug>
   <Drug>
     <name>Паклитаксел</name>
@@ -41,5 +46,6 @@
     <doseBSA>175</doseBSA>
     <AUC>0</AUC>
     <currentDose>0</currentDose>
+    <constantDose>false</constantDose>
   </Drug>
 </ArrayOfDrug>

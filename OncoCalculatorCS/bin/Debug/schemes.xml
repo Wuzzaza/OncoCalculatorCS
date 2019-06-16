@@ -9,28 +9,32 @@
         <description />
         <doseBSA>85</doseBSA>
         <AUC>0</AUC>
-        <currentDose>170</currentDose>
+        <currentDose>85</currentDose>
+        <constantDose>true</constantDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
         <doseBSA>200</doseBSA>
         <AUC>0</AUC>
-        <currentDose>400</currentDose>
+        <currentDose>382</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <doseBSA>400</doseBSA>
         <AUC>0</AUC>
-        <currentDose>800</currentDose>
+        <currentDose>764</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <doseBSA>600</doseBSA>
         <AUC>0</AUC>
-        <currentDose>1200</currentDose>
+        <currentDose>1146</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
     </drugsList>
   </Scheme>
@@ -44,6 +48,7 @@
         <doseBSA>100</doseBSA>
         <AUC>0</AUC>
         <currentDose>191</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
@@ -51,6 +56,7 @@
         <doseBSA>400</doseBSA>
         <AUC>0</AUC>
         <currentDose>764</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
@@ -58,6 +64,7 @@
         <doseBSA>400</doseBSA>
         <AUC>0</AUC>
         <currentDose>764</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
@@ -65,6 +72,7 @@
         <doseBSA>2400</doseBSA>
         <AUC>0</AUC>
         <currentDose>4583</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
     </drugsList>
   </Scheme>
@@ -78,6 +86,7 @@
         <doseBSA>175</doseBSA>
         <AUC>0</AUC>
         <currentDose>350</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Карбоплатин</name>
@@ -85,6 +94,7 @@
         <doseBSA>0</doseBSA>
         <AUC>5</AUC>
         <currentDose>125</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
     </drugsList>
   </Scheme>

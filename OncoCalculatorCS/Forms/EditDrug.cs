@@ -23,6 +23,7 @@ namespace OncoCalculatorCS.Forms
             this.descriptionTBX.Text = currentDrug.description;
             this.AUCTBX.Text = currentDrug.AUC.ToString();
             this.Text = currentDrug.name;
+            this.constantDoseCBX.Checked = currentDrug.constantDose;
 
         }
 
@@ -63,6 +64,8 @@ namespace OncoCalculatorCS.Forms
                     this.AUCTBX.BackColor = Color.LightCoral;
                     validFlag = false;
                 }
+
+            currentDrug.constantDose = this.constantDoseCBX.Checked;
 
             this.Owner.Refresh();
             if (validFlag) this.Close();

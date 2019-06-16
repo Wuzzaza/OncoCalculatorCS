@@ -28,6 +28,7 @@ namespace OncoCalculatorCS.Forms
             drugsGridView.DataSource = drugs;
             drugsGridView.ReadOnly = true;
             drugsGridView.Columns["currentDose"].Visible = false;
+            drugsGridView.Columns["constantDose"].Visible = false;
             drugsGridView.Columns["name"].HeaderText = "Название";
             drugsGridView.Columns["description"].HeaderText = "Описание";
             drugsGridView.Columns["doseBSA"].Width = 50;
@@ -37,6 +38,7 @@ namespace OncoCalculatorCS.Forms
 
             currentSchemeDataGridView.DataSource = scheme.drugsList;
             currentSchemeDataGridView.Columns["currentDose"].Visible = false;
+            currentSchemeDataGridView.Columns["constantDose"].Visible = false;
             currentSchemeDataGridView.Columns["name"].HeaderText = "Название";
             currentSchemeDataGridView.Columns["description"].HeaderText = "Описание";
             currentSchemeDataGridView.Columns["doseBSA"].Width = 50;

@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.AUCTBX = new System.Windows.Forms.TextBox();
             this.saveBTN = new System.Windows.Forms.Button();
+            this.constantDoseCBX = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +106,7 @@
             // 
             // saveBTN
             // 
-            this.saveBTN.Location = new System.Drawing.Point(12, 124);
+            this.saveBTN.Location = new System.Drawing.Point(16, 176);
             this.saveBTN.Name = "saveBTN";
             this.saveBTN.Size = new System.Drawing.Size(75, 23);
             this.saveBTN.TabIndex = 4;
@@ -113,11 +114,22 @@
             this.saveBTN.UseVisualStyleBackColor = true;
             this.saveBTN.Click += new System.EventHandler(this.saveBTN_Click);
             // 
+            // constantDoseCBX
+            // 
+            this.constantDoseCBX.AutoSize = true;
+            this.constantDoseCBX.Location = new System.Drawing.Point(79, 117);
+            this.constantDoseCBX.Name = "constantDoseCBX";
+            this.constantDoseCBX.Size = new System.Drawing.Size(136, 17);
+            this.constantDoseCBX.TabIndex = 5;
+            this.constantDoseCBX.Text = "Фиксированная доза";
+            this.constantDoseCBX.UseVisualStyleBackColor = true;
+            // 
             // EditDrug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 161);
+            this.ClientSize = new System.Drawing.Size(334, 211);
+            this.Controls.Add(this.constantDoseCBX);
             this.Controls.Add(this.saveBTN);
             this.Controls.Add(this.AUCTBX);
             this.Controls.Add(this.label4);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox AUCTBX;
         private System.Windows.Forms.Button saveBTN;
+        private System.Windows.Forms.CheckBox constantDoseCBX;
     }
 }
