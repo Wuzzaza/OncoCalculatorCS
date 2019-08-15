@@ -156,7 +156,7 @@
             this.currentPatientSchemeGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.currentPatientSchemeGridView.RowTemplate.DividerHeight = 1;
             this.currentPatientSchemeGridView.Size = new System.Drawing.Size(734, 287);
-            this.currentPatientSchemeGridView.TabIndex = 7;
+            this.currentPatientSchemeGridView.TabIndex = 9;
             this.currentPatientSchemeGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.currentPatientSchemeGridView_CellEndEdit);
             // 
             // schemeCMBX
@@ -218,17 +218,17 @@
             // 
             // weightTBX
             // 
-            this.weightTBX.Location = new System.Drawing.Point(135, 84);
+            this.weightTBX.Location = new System.Drawing.Point(135, 58);
             this.weightTBX.Name = "weightTBX";
             this.weightTBX.Size = new System.Drawing.Size(248, 20);
-            this.weightTBX.TabIndex = 3;
+            this.weightTBX.TabIndex = 2;
             this.weightTBX.Text = "0";
             this.weightTBX.Leave += new System.EventHandler(this.weightTBX_Leave);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 84);
+            this.label7.Location = new System.Drawing.Point(8, 58);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 0;
@@ -254,17 +254,17 @@
             // 
             // heightTBX
             // 
-            this.heightTBX.Location = new System.Drawing.Point(135, 58);
+            this.heightTBX.Location = new System.Drawing.Point(135, 84);
             this.heightTBX.Name = "heightTBX";
             this.heightTBX.Size = new System.Drawing.Size(248, 20);
-            this.heightTBX.TabIndex = 2;
+            this.heightTBX.TabIndex = 3;
             this.heightTBX.Text = "0";
             this.heightTBX.Leave += new System.EventHandler(this.heightTBX_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 58);
+            this.label2.Location = new System.Drawing.Point(8, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 0;
