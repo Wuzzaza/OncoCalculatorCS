@@ -16,20 +16,21 @@ namespace OncoCalculatorCS
 {
     public partial class MainForm : Form
     {
-        const int TOP_FIELD = 60;
-        const int LEFT_FIELD = 60;
+        private const int TOP_FIELD = 60;
+        private const int LEFT_FIELD = 60;
 
-        BindingList<Drug> drugs;
-        BindingList<Scheme> schemes;
-        int selectedSchemeIndex;
-        int selectedDrugIndex;
-        Scheme currentScheme;
-        int height;
-        int age;
-        int weight;
-        int creatinin;
-        double BSA = 0d; // Body Surface Area
-        double GFR = 0d; // Glomerular Filtration Rate
+        private BindingList<Drug> drugs;
+        private BindingList<Scheme> schemes;
+        private int selectedSchemeIndex;
+        private int selectedDrugIndex;
+        private Scheme currentScheme;
+        private int height;
+        private int age;
+        private int weight;
+        private int creatinin;
+        private uint doseReduction = 0;
+        private double BSA = 0d; // Body Surface Area
+        private double GFR = 0d; // Glomerular Filtration Rate
 
         public MainForm()
         {
@@ -227,8 +228,10 @@ namespace OncoCalculatorCS
 
                 StringBuilder headerString = 
                     new StringBuilder("Расчет дозы химиотерапии по схеме: " +
-                                      currentScheme.name + "\n");
-
+                                      currentScheme.name);
+                if (doseReduction > 0) headerString.Append(" (редукция дозы " + doseReduction + "%)");
+                headerString.Append("\n");
+                
                 headerString.Append ("ФИО пациента: " + nameTBX.Text + "\n \n");
 
                 headerString.Append("Дата: " + dateTimePicker1.Value.ToShortDateString() + "\n \n");
@@ -260,15 +263,24 @@ namespace OncoCalculatorCS
                     {
                         headerString.Append(drug.name + "  Доза на м2 = " + drug.doseBSA.ToString()
                                            + "мг. Доза = " + drug.doseBSA.ToString() + " * " + this.BSA.ToString("0.##")
-                                           + " = " + drug.currentDose.ToString() + "мг. \n");
+                                           + " = " + drug.currentDose.ToString() + "мг");
+
                     }
 
                     if (drug.doseBSA == 0 && drug.AUC > 0 && this.GFR > 0)
                     {
                         headerString.Append(drug.name + " AUC = " + drug.AUC.ToString()
                                            + ". Доза = " + drug.AUC.ToString() + " * (" + this.GFR.ToString("0.#")
-                                           + " + 25) = " + drug.currentDose.ToString() + "мг. \n");
+                                           + " + 25) = " + drug.currentDose.ToString() + "мг.");
+
                     }
+
+                    if (doseReduction > 0)
+                        headerString.Append(" - " + doseReduction.ToString() + "% =" +
+                                            (drug.currentDose - (drug.currentDose * doseReduction / 100)).ToString() + "мг.");
+
+                    headerString.Append("\n");
+
                 }
 
                 headerString.Append("\n \t Подпись врача:");
@@ -433,5 +445,22 @@ namespace OncoCalculatorCS
         {
             recalculateDoses();
         }
+
+        private void doseReductionTBX_Leave(object sender, EventArgs e)
+        {
+            if (UInt32.TryParse(this.doseReductionTBX.Text, out doseReduction))
+            {
+                this.doseReductionTBX.BackColor = Color.White;
+                recalculateDoses();
+            }
+            else
+            {
+                MessageBox.Show("Недопустимое значение редукции дозы");
+                this.doseReductionTBX.BackColor = Color.LightCoral;
+
+            }
+            if (doseReduction > 100) doseReduction = 100;
+            doseReductionTBX.Text = doseReduction.ToString();
+            }
     }
 }

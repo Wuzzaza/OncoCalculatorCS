@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.doseReductionTBX = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.printBTN = new System.Windows.Forms.Button();
             this.currentPatientSchemeGridView = new System.Windows.Forms.DataGridView();
@@ -63,6 +64,7 @@
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentPatientSchemeGridView)).BeginInit();
@@ -87,6 +89,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.doseReductionTBX);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.printBTN);
             this.tabPage1.Controls.Add(this.currentPatientSchemeGridView);
@@ -103,6 +106,7 @@
             this.tabPage1.Controls.Add(this.heightTBX);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.nameTBX);
+            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -112,6 +116,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Пациент";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // doseReductionTBX
+            // 
+            this.doseReductionTBX.Location = new System.Drawing.Point(645, 6);
+            this.doseReductionTBX.Name = "doseReductionTBX";
+            this.doseReductionTBX.Size = new System.Drawing.Size(100, 20);
+            this.doseReductionTBX.TabIndex = 10;
+            this.doseReductionTBX.Text = "0";
+            this.doseReductionTBX.Leave += new System.EventHandler(this.doseReductionTBX_Leave);
             // 
             // dateTimePicker1
             // 
@@ -280,11 +293,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 32);
+            this.label8.Location = new System.Drawing.Point(538, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 13);
+            this.label8.Size = new System.Drawing.Size(101, 13);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Дата";
+            this.label8.Text = "Редукция дозы (%)";
             // 
             // label1
             // 
@@ -405,6 +418,15 @@
             // 
             this.mainFormBindingSource.DataSource = typeof(OncoCalculatorCS.MainForm);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 32);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Дата";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,6 +485,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox doseReductionTBX;
+        private System.Windows.Forms.Label label9;
     }
 }
 

@@ -17,7 +17,7 @@
         <description />
         <doseBSA>200</doseBSA>
         <AUC>0</AUC>
-        <currentDose>382</currentDose>
+        <currentDose>0</currentDose>
         <constantDose>false</constantDose>
       </Drug>
       <Drug>
@@ -25,7 +25,7 @@
         <description />
         <doseBSA>400</doseBSA>
         <AUC>0</AUC>
-        <currentDose>764</currentDose>
+        <currentDose>0</currentDose>
         <constantDose>false</constantDose>
       </Drug>
       <Drug>
@@ -33,7 +33,7 @@
         <description />
         <doseBSA>600</doseBSA>
         <AUC>0</AUC>
-        <currentDose>1146</currentDose>
+        <currentDose>0</currentDose>
         <constantDose>false</constantDose>
       </Drug>
     </drugsList>
