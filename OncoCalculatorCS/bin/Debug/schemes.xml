@@ -9,15 +9,15 @@
         <description />
         <doseBSA>85</doseBSA>
         <AUC>0</AUC>
-        <currentDose>85</currentDose>
-        <constantDose>true</constantDose>
+        <currentDose>151</currentDose>
+        <constantDose>false</constantDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
         <doseBSA>200</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>356</currentDose>
         <constantDose>false</constantDose>
       </Drug>
       <Drug>
@@ -25,7 +25,7 @@
         <description />
         <doseBSA>400</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>711</currentDose>
         <constantDose>false</constantDose>
       </Drug>
       <Drug>
@@ -33,7 +33,7 @@
         <description />
         <doseBSA>600</doseBSA>
         <AUC>0</AUC>
-        <currentDose>0</currentDose>
+        <currentDose>1067</currentDose>
         <constantDose>false</constantDose>
       </Drug>
     </drugsList>

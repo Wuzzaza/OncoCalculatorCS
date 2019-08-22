@@ -13,7 +13,6 @@ F:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.pdb
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe.config
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.pdb
-G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditDrug.resources
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditScheme.resources
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.MainForm.resources

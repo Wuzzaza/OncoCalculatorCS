@@ -204,6 +204,11 @@ namespace OncoCalculatorCS
 
         private void printBTN_Click(object sender, EventArgs e)
         {
+            calculateBSA();
+            calculateGFR();
+            recalculateDoses();
+            currentPatientSchemeGridView.Refresh();
+
             currentPatientSchemeGridView.ClearSelection();
 
             PrintDocument docToPrint = new PrintDocument();
