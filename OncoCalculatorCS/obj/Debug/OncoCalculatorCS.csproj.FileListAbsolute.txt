@@ -21,3 +21,4 @@ G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.CoreCompileInputs.cache
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.exe
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.pdb
+G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache

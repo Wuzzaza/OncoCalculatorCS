@@ -19,11 +19,27 @@ namespace OncoCalculatorCS.Forms
             InitializeComponent();
             this.currentDrug = currentDrug;
             this.nameTBX.Text = currentDrug.name;
-            this.dosageTBX.Text = currentDrug.doseBSA.ToString();
+            this.dosageTBX.Text = currentDrug.dose.ToString();
             this.descriptionTBX.Text = currentDrug.description;
-            this.AUCTBX.Text = currentDrug.AUC.ToString();
             this.Text = currentDrug.name;
-            this.constantDoseCBX.Checked = currentDrug.constantDose;
+            switch (currentDrug.calculationMethod)
+            {
+                case Drug.CalculationMethod.AUC:
+                    AUC_RBTN.Checked = true;
+                    break;
+
+                case Drug.CalculationMethod.BSA:
+                    BSA_RBTN.Checked = true;
+                    break;
+
+                case Drug.CalculationMethod.PER_KG:
+                    PER_KG_RBTN.Checked = true;
+                    break;
+
+                case Drug.CalculationMethod.FIXED:
+                    FIXED_RBTN.Checked = true;
+                    break;
+            }
 
         }
 
@@ -36,13 +52,12 @@ namespace OncoCalculatorCS.Forms
         {
             this.currentDrug.name = this.nameTBX.Text;
             this.currentDrug.description = this.descriptionTBX.Text;
-            int doseBSA = 0;
-            int AUC = 0;
+            double dose = 0;
             bool validFlag = true;
 
-            if (Int32.TryParse(this.dosageTBX.Text, out doseBSA))
+            if (Double.TryParse(this.dosageTBX.Text, out dose))
                 {
-                    currentDrug.doseBSA = doseBSA;
+                    currentDrug.dose = dose;
                     this.dosageTBX.BackColor = Color.White;
                 }
             else
@@ -52,20 +67,12 @@ namespace OncoCalculatorCS.Forms
                     validFlag = false;
                 }
 
+            if (BSA_RBTN.Checked) currentDrug.calculationMethod = Drug.CalculationMethod.BSA;
+            if (AUC_RBTN.Checked) currentDrug.calculationMethod = Drug.CalculationMethod.AUC;
+            if (PER_KG_RBTN.Checked) currentDrug.calculationMethod = Drug.CalculationMethod.PER_KG;
+            if (FIXED_RBTN.Checked) currentDrug.calculationMethod = Drug.CalculationMethod.FIXED;
 
-            if (Int32.TryParse(this.AUCTBX.Text, out AUC))
-                {
-                    currentDrug.AUC = AUC;
-                    this.AUCTBX.BackColor = Color.White;
-                }
-            else
-                {
-                    MessageBox.Show("Недопустимое значение AUC");
-                    this.AUCTBX.BackColor = Color.LightCoral;
-                    validFlag = false;
-                }
 
-            currentDrug.constantDose = this.constantDoseCBX.Checked;
 
             this.Owner.Refresh();
             if (validFlag) this.Close();

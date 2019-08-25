@@ -28,22 +28,20 @@ namespace OncoCalculatorCS.Forms
             drugsGridView.DataSource = drugs;
             drugsGridView.ReadOnly = true;
             drugsGridView.Columns["currentDose"].Visible = false;
-            drugsGridView.Columns["constantDose"].Visible = false;
-            drugsGridView.Columns["name"].HeaderText = "Название";
+            //drugsGridView.Columns["calculationMethod"].Visible = false;
+                        drugsGridView.Columns["name"].HeaderText = "Название";
             drugsGridView.Columns["description"].HeaderText = "Описание";
-            drugsGridView.Columns["doseBSA"].Width = 50;
-            drugsGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
-            drugsGridView.Columns["AUC"].Width = 50;
+            drugsGridView.Columns["dose"].Width = 80;
+            drugsGridView.Columns["dose"].HeaderText = "Дозировка";
             drugsGridView.AllowUserToResizeColumns = false;
 
             currentSchemeDataGridView.DataSource = scheme.drugsList;
             currentSchemeDataGridView.Columns["currentDose"].Visible = false;
-            currentSchemeDataGridView.Columns["constantDose"].Visible = false;
+            //currentSchemeDataGridView.Columns["calculationMethod"].Visible = false;
             currentSchemeDataGridView.Columns["name"].HeaderText = "Название";
             currentSchemeDataGridView.Columns["description"].HeaderText = "Описание";
-            currentSchemeDataGridView.Columns["doseBSA"].Width = 50;
-            currentSchemeDataGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
-            currentSchemeDataGridView.Columns["AUC"].Width = 50;
+            currentSchemeDataGridView.Columns["dose"].Width = 80;
+            currentSchemeDataGridView.Columns["dose"].HeaderText = "Дозировка";
             currentSchemeDataGridView.AllowUserToResizeColumns = false;
 
 
