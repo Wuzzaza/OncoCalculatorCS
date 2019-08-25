@@ -7,34 +7,30 @@
       <Drug>
         <name>Оксалиплатин</name>
         <description />
-        <doseBSA>85</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>85</currentDose>
-        <constantDose>true</constantDose>
+        <dose>85</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>170</currentDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
-        <doseBSA>200</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>0</currentDose>
-        <constantDose>false</constantDose>
+        <dose>200</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>400</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
-        <doseBSA>400</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>0</currentDose>
-        <constantDose>false</constantDose>
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>800</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
-        <doseBSA>600</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>0</currentDose>
-        <constantDose>false</constantDose>
+        <dose>600</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1200</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
@@ -45,34 +41,30 @@
       <Drug>
         <name>Оксалиплатин</name>
         <description />
-        <doseBSA>100</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>191</currentDose>
-        <constantDose>false</constantDose>
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
-        <doseBSA>400</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>764</currentDose>
-        <constantDose>false</constantDose>
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
-        <doseBSA>400</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>764</currentDose>
-        <constantDose>false</constantDose>
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
-        <doseBSA>2400</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>4583</currentDose>
-        <constantDose>false</constantDose>
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
@@ -83,18 +75,16 @@
       <Drug>
         <name>Паклитаксел</name>
         <description />
-        <doseBSA>175</doseBSA>
-        <AUC>0</AUC>
-        <currentDose>350</currentDose>
-        <constantDose>false</constantDose>
+        <dose>175</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>52864.583333333328</currentDose>
       </Drug>
       <Drug>
         <name>Карбоплатин</name>
         <description />
-        <doseBSA>0</doseBSA>
-        <AUC>5</AUC>
-        <currentDose>125</currentDose>
-        <constantDose>false</constantDose>
+        <dose>6</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>1812.5</currentDose>
       </Drug>
     </drugsList>
   </Scheme>

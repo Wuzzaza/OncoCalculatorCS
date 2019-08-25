@@ -74,8 +74,8 @@ namespace OncoCalculatorCS
             drugsDataGridView.Columns["currentDose"].Visible = false;
             drugsDataGridView.Columns["name"].HeaderText = "Название";
             drugsDataGridView.Columns["description"].HeaderText = "Описание";
-            drugsDataGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
-            drugsDataGridView.Columns["constantDose"].HeaderText = "Фикс. доза";
+            drugsDataGridView.Columns["calculationMethod"].HeaderText = "Способ расчета";
+            drugsDataGridView.Columns["dose"].HeaderText = "Дозировка";
 
             schemesDataGridView.DataSource = schemes;
 
@@ -88,6 +88,7 @@ namespace OncoCalculatorCS
             schemeCMBX.DisplayMember = "name";
 
             currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            currentPatientSchemeGridView.Columns["calculationMethod"].Visible = false;
 
         }
 
@@ -193,9 +194,8 @@ namespace OncoCalculatorCS
             currentPatientSchemeGridView.DataSource = (schemeCMBX.SelectedItem as Scheme).drugsList;
             currentPatientSchemeGridView.Columns["name"].HeaderText = "Название";
             currentPatientSchemeGridView.Columns["description"].HeaderText = "Описание";
-            currentPatientSchemeGridView.Columns["doseBSA"].HeaderText = "Доза на м2";
+            currentPatientSchemeGridView.Columns["dose"].HeaderText = "Дозировка";
             currentPatientSchemeGridView.Columns["currentDose"].HeaderText = "Доза";
-            currentPatientSchemeGridView.Columns["constantDose"].HeaderText = "Фикс. доза";
 
             currentScheme = (schemeCMBX.SelectedItem as Scheme);
 
@@ -204,6 +204,11 @@ namespace OncoCalculatorCS
 
         private void printBTN_Click(object sender, EventArgs e)
         {
+            calculateBSA();
+            calculateGFR();
+            recalculateDoses();
+            currentPatientSchemeGridView.Refresh();
+
             currentPatientSchemeGridView.ClearSelection();
 
             PrintDocument docToPrint = new PrintDocument();
@@ -253,27 +258,7 @@ namespace OncoCalculatorCS
 
                 foreach (Drug drug in currentScheme.drugsList)
                 {
-                    if (drug.constantDose)
-                    {
-                        headerString.Append(drug.name + "  Доза = " + drug.currentDose.ToString() + " мг. \n");
-                        continue;
-                    }
-
-                    if (drug.doseBSA > 0 && drug.AUC == 0 && this.BSA > 0)
-                    {
-                        headerString.Append(drug.name + "  Доза на м2 = " + drug.doseBSA.ToString()
-                                           + "мг. Доза = " + drug.doseBSA.ToString() + " * " + this.BSA.ToString("0.##")
-                                           + " = " + drug.currentDose.ToString() + "мг");
-
-                    }
-
-                    if (drug.doseBSA == 0 && drug.AUC > 0 && this.GFR > 0)
-                    {
-                        headerString.Append(drug.name + " AUC = " + drug.AUC.ToString()
-                                           + ". Доза = " + drug.AUC.ToString() + " * (" + this.GFR.ToString("0.#")
-                                           + " + 25) = " + drug.currentDose.ToString() + "мг.");
-
-                    }
+                    //TODO drug dose to printer
 
                     if (doseReduction > 0)
                         headerString.Append(" - " + doseReduction.ToString() + "% =" +
@@ -418,23 +403,23 @@ namespace OncoCalculatorCS
             
             foreach (Drug drug in currentScheme.drugsList)
             {
-                if (drug.constantDose)
+                if (drug.calculationMethod == Drug.CalculationMethod.FIXED)
                 {
-                    drug.currentDose = drug.doseBSA;
+                    drug.currentDose = drug.dose;
                     continue;
                 }
 
-                if (drug.doseBSA > 0 && drug.AUC == 0)
+                if (drug.calculationMethod == Drug.CalculationMethod.BSA)
                 {
                     if (BSA < 2)
-                        drug.currentDose = Convert.ToInt32(Convert.ToDouble(drug.doseBSA) * BSA);
+                        drug.currentDose = drug.dose * BSA;
                     else
-                        drug.currentDose = drug.doseBSA * 2;
+                        drug.currentDose = drug.dose * 2;
 
                 }
 
-                if (drug.doseBSA == 0 && drug.AUC > 0) {
-                    drug.currentDose = Convert.ToInt32(drug.AUC * (GFR + 25));
+                if (drug.calculationMethod == Drug.CalculationMethod.AUC) {
+                    drug.currentDose = drug.dose * (GFR + 25);
                 }
             }
 
