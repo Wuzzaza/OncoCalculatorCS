@@ -9,28 +9,28 @@
         <description />
         <dose>85</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>170</currentDose>
+        <currentDose>0.93541434669348533</currentDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
         <dose>200</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>400</currentDose>
+        <currentDose>374.16573867739413</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <dose>400</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>800</currentDose>
+        <currentDose>748.33147735478826</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <dose>600</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>1200</currentDose>
+        <currentDose>1122.4972160321825</currentDose>
       </Drug>
     </drugsList>
   </Scheme>

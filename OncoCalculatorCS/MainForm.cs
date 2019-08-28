@@ -89,6 +89,7 @@ namespace OncoCalculatorCS
 
             currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             currentPatientSchemeGridView.Columns["calculationMethod"].Visible = false;
+            currentPatientSchemeGridView.Columns["currentDose"].DefaultCellStyle.Format = "N2";
 
         }
 
