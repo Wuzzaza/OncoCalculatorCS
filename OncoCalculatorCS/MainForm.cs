@@ -260,10 +260,26 @@ namespace OncoCalculatorCS
                 foreach (Drug drug in currentScheme.drugsList)
                 {
                     //TODO drug dose to printer
+                    switch (drug.calculationMethod)
+                    {
+                        case Drug.CalculationMethod.BSA:
+                            headerString.Append(drug.name + " " + drug.dose.ToString("N2") + "мг * " + BSA.ToString("N2") + " = " + drug.currentDose.ToString("N2") + "мг");
+                            break;
+
+                        case Drug.CalculationMethod.AUC:
+                            break;
+                        case Drug.CalculationMethod.PER_KG:
+                            headerString.Append(drug.name + " " + drug.dose.ToString("N2") + "мг * " + weight.ToString("N2") + "кг = " + drug.currentDose.ToString("N2") + "мг");
+                            break;
+
+                        case Drug.CalculationMethod.FIXED:
+                            headerString.Append(drug.name + " = " + drug.currentDose.ToString("N2") + "мг");
+                            break;
+                    }
 
                     if (doseReduction > 0)
-                        headerString.Append(" - " + doseReduction.ToString() + "% =" +
-                                            (drug.currentDose - (drug.currentDose * doseReduction / 100)).ToString() + "мг.");
+                        headerString.Append(" - " + doseReduction.ToString() + "% = " +
+                                            (drug.currentDose - (drug.currentDose * doseReduction / 100)).ToString("N2") + "мг.");
 
                     headerString.Append("\n");
 
@@ -274,7 +290,9 @@ namespace OncoCalculatorCS
                 e.Graphics.DrawString(headerString.ToString(), header_font, new SolidBrush(Color.Black), new Point(LEFT_FIELD, TOP_FIELD));
             }
 
-            /*
+
+            /* 
+             
             e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
 
             e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
@@ -293,7 +311,7 @@ namespace OncoCalculatorCS
                                                       currentPatientSchemeGridView.Height * 5));
             e.Graphics.DrawImage(bmp, 15, 120);
             */
-                        
+
         }
 
         private void heightTBX_Leave(object sender, EventArgs e)
@@ -419,8 +437,14 @@ namespace OncoCalculatorCS
 
                 }
 
-                if (drug.calculationMethod == Drug.CalculationMethod.AUC) {
+                if (drug.calculationMethod == Drug.CalculationMethod.AUC)
+                {
                     drug.currentDose = drug.dose * (GFR + 25);
+                }
+
+                if (drug.calculationMethod == Drug.CalculationMethod.PER_KG)
+                {
+                    drug.currentDose = drug.dose * weight;
                 }
             }
 

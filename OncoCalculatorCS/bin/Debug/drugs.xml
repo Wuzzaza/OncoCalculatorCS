@@ -42,4 +42,18 @@
     <calculationMethod>BSA</calculationMethod>
     <currentDose>0</currentDose>
   </Drug>
+  <Drug>
+    <name>asdasdasd</name>
+    <description />
+    <dose>25</dose>
+    <calculationMethod>PER_KG</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>fsdfsdfsdf</name>
+    <description />
+    <dose>15</dose>
+    <calculationMethod>FIXED</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
 </ArrayOfDrug>

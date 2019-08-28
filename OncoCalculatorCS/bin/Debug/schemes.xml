@@ -9,28 +9,28 @@
         <description />
         <dose>85</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>0.93541434669348533</currentDose>
+        <currentDose>130.80214596438734</currentDose>
       </Drug>
       <Drug>
         <name>Лейковорин</name>
         <description />
         <dose>200</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>374.16573867739413</currentDose>
+        <currentDose>307.76975521032313</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <dose>400</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>748.33147735478826</currentDose>
+        <currentDose>615.53951042064625</currentDose>
       </Drug>
       <Drug>
         <name>Фторурацил</name>
         <description />
         <dose>600</dose>
         <calculationMethod>BSA</calculationMethod>
-        <currentDose>1122.4972160321825</currentDose>
+        <currentDose>923.30926563096932</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
@@ -85,6 +85,33 @@
         <dose>6</dose>
         <calculationMethod>AUC</calculationMethod>
         <currentDose>1812.5</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>new</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>155</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>238.52156028800042</currentDose>
+      </Drug>
+      <Drug>
+        <name>asdasdasd</name>
+        <description />
+        <dose>7.5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>412.5</currentDose>
+      </Drug>
+      <Drug>
+        <name>fsdfsdfsdf</name>
+        <description />
+        <dose>15</dose>
+        <calculationMethod>FIXED</calculationMethod>
+        <currentDose>15</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
