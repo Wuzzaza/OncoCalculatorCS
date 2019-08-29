@@ -263,17 +263,22 @@ namespace OncoCalculatorCS
                     switch (drug.calculationMethod)
                     {
                         case Drug.CalculationMethod.BSA:
-                            headerString.Append(drug.name + " " + drug.dose.ToString("N2") + "мг * " + BSA.ToString("N2") + " = " + drug.currentDose.ToString("N2") + "мг");
+                            headerString.Append(drug.name + "  Доза на м2 = " + drug.dose.ToString("N2") + "мг. Доза равна = " 
+                                + drug.dose.ToString("N2") + " * " + BSA.ToString("N2") + " = " + drug.currentDose.ToString("N2") + "мг");
                             break;
 
                         case Drug.CalculationMethod.AUC:
+                            headerString.Append(drug.name + "  Доза равна = "
+                                + drug.dose.ToString("N0") + " * (" + GFR.ToString("N2") + " + 25) = " + drug.currentDose.ToString("N2") + "мг");
                             break;
+
                         case Drug.CalculationMethod.PER_KG:
-                            headerString.Append(drug.name + " " + drug.dose.ToString("N2") + "мг * " + weight.ToString("N2") + "кг = " + drug.currentDose.ToString("N2") + "мг");
+                            headerString.Append(drug.name + " Доза на кг = " + drug.dose.ToString("N2") + "мг. Доза равна = "
+                                + drug.dose.ToString("N2") + " * " + weight.ToString("N2") + " = " + drug.currentDose.ToString("N2") + "мг");
                             break;
 
                         case Drug.CalculationMethod.FIXED:
-                            headerString.Append(drug.name + " = " + drug.currentDose.ToString("N2") + "мг");
+                            headerString.Append(drug.name + "  Доза равна = " + drug.currentDose.ToString("N2") + "мг");
                             break;
                     }
 
