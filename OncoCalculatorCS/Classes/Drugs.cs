@@ -18,7 +18,7 @@ namespace OncoCalculatorCS.Classes
         public CalculationMethod calculationMethod { get; set; }
         public double currentDose { get; set; }
 
-        public Drug makeCopy() {
+        public Drug clone() {
             Drug thisDrugCopy = new Drug();
             thisDrugCopy.name = this.name;
             thisDrugCopy.description = this.description;

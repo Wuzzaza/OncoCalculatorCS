@@ -21,6 +21,8 @@ namespace OncoCalculatorCS
 
         private BindingList<Drug> drugs;
         private BindingList<Scheme> schemes;
+        private BindingList<Patient> patients;
+
         private int selectedSchemeIndex;
         private int selectedDrugIndex;
         private Scheme currentScheme;
@@ -37,6 +39,10 @@ namespace OncoCalculatorCS
             InitializeComponent();
             drugs = new BindingList<Drug>();
             schemes = new BindingList<Scheme>();
+            patients = new BindingList<Patient>();
+            currentScheme = new Scheme();
+
+            patientBTN.BackgroundImageLayout = ImageLayout.Stretch;
 
             {
                 XmlSerializer formatter = new XmlSerializer(typeof(BindingList<Drug>));
@@ -68,29 +74,47 @@ namespace OncoCalculatorCS
                 }
             }
 
-                       
-            drugsDataGridView.DataSource = drugs;
+            {
+                XmlSerializer formatter = new XmlSerializer(typeof(BindingList<Patient>));
 
-            drugsDataGridView.Columns["currentDose"].Visible = false;
-            drugsDataGridView.Columns["name"].HeaderText = "Название";
-            drugsDataGridView.Columns["description"].HeaderText = "Описание";
-            drugsDataGridView.Columns["calculationMethod"].HeaderText = "Способ расчета";
-            drugsDataGridView.Columns["dose"].HeaderText = "Дозировка";
+                try
+                {
+                    FileStream fs = new FileStream("patients.xml", FileMode.OpenOrCreate);
+                    patients = formatter.Deserialize(fs) as BindingList<Patient>;
+                    fs.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Cannot open Patients File");
+                }
+            }
 
-            schemesDataGridView.DataSource = schemes;
 
-            schemesDataGridView.Columns["name"].HeaderText = "Название";
-            schemesDataGridView.Columns["intervalInDays"].HeaderText = "Интервал";
-            schemesDataGridView.ReadOnly = true;
-            schemesDataGridView.AllowUserToResizeColumns = false;
+            {
+                drugsDataGridView.DataSource = drugs;
 
-            schemeCMBX.DataSource = schemes;
-            schemeCMBX.DisplayMember = "name";
+                drugsDataGridView.Columns["currentDose"].Visible = false;
+                drugsDataGridView.Columns["name"].HeaderText = "Название";
+                drugsDataGridView.Columns["description"].HeaderText = "Описание";
+                drugsDataGridView.Columns["calculationMethod"].HeaderText = "Способ расчета";
+                drugsDataGridView.Columns["dose"].HeaderText = "Дозировка";
 
-            currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            currentPatientSchemeGridView.Columns["calculationMethod"].Visible = false;
-            currentPatientSchemeGridView.Columns["currentDose"].DefaultCellStyle.Format = "N2";
+                schemesDataGridView.DataSource = schemes;
 
+                schemesDataGridView.Columns["name"].HeaderText = "Название";
+                schemesDataGridView.Columns["intervalInDays"].HeaderText = "Интервал";
+                schemesDataGridView.ReadOnly = true;
+                schemesDataGridView.AllowUserToResizeColumns = false;
+
+                schemeCMBX.DataSource = schemes;
+                schemeCMBX.DisplayMember = "name";
+
+                currentPatientSchemeGridView.DataSource = currentScheme.drugsList;
+
+                currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                currentPatientSchemeGridView.Columns["calculationMethod"].Visible = false;
+                currentPatientSchemeGridView.Columns["currentDose"].DefaultCellStyle.Format = "N2";
+            }
         }
 
         private void addDrugButton_Click(object sender, EventArgs e)
@@ -134,6 +158,20 @@ namespace OncoCalculatorCS
                 catch
                 {
                     MessageBox.Show("Cannot open Schemes File");
+                }
+            }
+
+            {
+                XmlSerializer formatter = new XmlSerializer(typeof(BindingList<Patient>));
+                try
+                {
+                    FileStream fs = new FileStream("patients.xml", FileMode.Create);
+                    formatter.Serialize(fs, patients);
+                    fs.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Cannot open Patients File");
                 }
             }
 

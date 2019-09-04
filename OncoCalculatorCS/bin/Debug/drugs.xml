@@ -1,59 +1,10 @@
 <?xml version="1.0"?>
 <ArrayOfDrug xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Drug>
-    <name>Фторурацил</name>
+    <name>sdfsdfsdfsdf</name>
     <description />
     <dose>0</dose>
     <calculationMethod>BSA</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>Лейковорин</name>
-    <description />
-    <dose>0</dose>
-    <calculationMethod>BSA</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>Оксалиплатин</name>
-    <description />
-    <dose>0</dose>
-    <calculationMethod>BSA</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>Гемцитабин</name>
-    <description />
-    <dose>0</dose>
-    <calculationMethod>BSA</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>Карбоплатин</name>
-    <description />
-    <dose>0</dose>
-    <calculationMethod>AUC</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>Паклитаксел</name>
-    <description />
-    <dose>0</dose>
-    <calculationMethod>BSA</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>asdasdasd</name>
-    <description />
-    <dose>25</dose>
-    <calculationMethod>PER_KG</calculationMethod>
-    <currentDose>0</currentDose>
-  </Drug>
-  <Drug>
-    <name>fsdfsdfsdf</name>
-    <description />
-    <dose>15</dose>
-    <calculationMethod>FIXED</calculationMethod>
     <currentDose>0</currentDose>
   </Drug>
 </ArrayOfDrug>

@@ -19,6 +19,19 @@ namespace OncoCalculatorCS.Classes
             this.drugsList = new BindingList<Drug>();
         }
 
+        public Scheme clone() {
+            Scheme thisSchemeCopy = new Scheme();
+            thisSchemeCopy.name = this.name;
+            thisSchemeCopy.intervalInDays = this.intervalInDays;
+            thisSchemeCopy.drugsList = new BindingList<Drug>();
+            foreach (Drug drug in this.drugsList)
+            {
+                thisSchemeCopy.drugsList.Add(drug.clone());
+            }
+
+            return thisSchemeCopy;
+        }
+
         
     }
 }

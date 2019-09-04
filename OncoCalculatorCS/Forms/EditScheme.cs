@@ -52,7 +52,7 @@ namespace OncoCalculatorCS.Forms
 
         private void drugsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Drug newDrug = drugs[(sender as DataGridView).CurrentRow.Index].makeCopy();
+            Drug newDrug = drugs[(sender as DataGridView).CurrentRow.Index].clone();
             this.scheme.drugsList.Add(newDrug);
             currentSchemeDataGridView.Refresh();
         }

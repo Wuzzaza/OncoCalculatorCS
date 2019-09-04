@@ -64,6 +64,7 @@
             this.drugsDataGridView = new System.Windows.Forms.DataGridView();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.patientBTN = new System.Windows.Forms.Button();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,6 +90,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.patientBTN);
             this.tabPage1.Controls.Add(this.doseReductionTBX);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.printBTN);
@@ -424,6 +426,15 @@
             this.printPreviewDialog.UseAntiAlias = true;
             this.printPreviewDialog.Visible = false;
             // 
+            // patientBTN
+            // 
+            this.patientBTN.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.patientBTN.Location = new System.Drawing.Point(389, 4);
+            this.patientBTN.Name = "patientBTN";
+            this.patientBTN.Size = new System.Drawing.Size(24, 24);
+            this.patientBTN.TabIndex = 11;
+            this.patientBTN.UseVisualStyleBackColor = true;
+            // 
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(OncoCalculatorCS.MainForm);
@@ -488,6 +499,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox doseReductionTBX;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button patientBTN;
     }
 }
 
