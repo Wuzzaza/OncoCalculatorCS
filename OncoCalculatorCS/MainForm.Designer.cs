@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.patientBTN = new System.Windows.Forms.Button();
             this.doseReductionTBX = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.printBTN = new System.Windows.Forms.Button();
@@ -64,8 +65,9 @@
             this.drugsDataGridView = new System.Windows.Forms.DataGridView();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.patientBTN = new System.Windows.Forms.Button();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saveBTN = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentPatientSchemeGridView)).BeginInit();
@@ -90,6 +92,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.saveBTN);
             this.tabPage1.Controls.Add(this.patientBTN);
             this.tabPage1.Controls.Add(this.doseReductionTBX);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
@@ -118,6 +122,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Пациент";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // patientBTN
+            // 
+            this.patientBTN.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.patientBTN.Location = new System.Drawing.Point(389, 4);
+            this.patientBTN.Name = "patientBTN";
+            this.patientBTN.Size = new System.Drawing.Size(24, 24);
+            this.patientBTN.TabIndex = 11;
+            this.patientBTN.UseVisualStyleBackColor = true;
             // 
             // doseReductionTBX
             // 
@@ -426,18 +439,27 @@
             this.printPreviewDialog.UseAntiAlias = true;
             this.printPreviewDialog.Visible = false;
             // 
-            // patientBTN
-            // 
-            this.patientBTN.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.patientBTN.Location = new System.Drawing.Point(389, 4);
-            this.patientBTN.Name = "patientBTN";
-            this.patientBTN.Size = new System.Drawing.Size(24, 24);
-            this.patientBTN.TabIndex = 11;
-            this.patientBTN.UseVisualStyleBackColor = true;
-            // 
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(OncoCalculatorCS.MainForm);
+            // 
+            // saveBTN
+            // 
+            this.saveBTN.Location = new System.Drawing.Point(389, 190);
+            this.saveBTN.Name = "saveBTN";
+            this.saveBTN.Size = new System.Drawing.Size(75, 23);
+            this.saveBTN.TabIndex = 12;
+            this.saveBTN.Text = "Сохранить";
+            this.saveBTN.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(470, 190);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Новый";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -500,6 +522,8 @@
         private System.Windows.Forms.TextBox doseReductionTBX;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button patientBTN;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button saveBTN;
     }
 }
 

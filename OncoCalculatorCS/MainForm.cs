@@ -26,6 +26,7 @@ namespace OncoCalculatorCS
         private int selectedSchemeIndex;
         private int selectedDrugIndex;
         private Scheme currentScheme;
+        private Patient currentPatient;
         private int height;
         private int age;
         private int weight;
@@ -41,6 +42,7 @@ namespace OncoCalculatorCS
             schemes = new BindingList<Scheme>();
             patients = new BindingList<Patient>();
             currentScheme = new Scheme();
+            currentPatient = new Patient();
 
             patientBTN.BackgroundImageLayout = ImageLayout.Stretch;
 
