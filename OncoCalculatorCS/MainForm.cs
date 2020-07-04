@@ -232,13 +232,15 @@ namespace OncoCalculatorCS
 
         private void schemeCMBX_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentPatientSchemeGridView.DataSource = (schemeCMBX.SelectedItem as Scheme).drugsList;
+            currentScheme = (schemeCMBX.SelectedItem as Scheme).clone();
+
+            currentPatientSchemeGridView.DataSource = currentScheme.drugsList;
             currentPatientSchemeGridView.Columns["name"].HeaderText = "Название";
             currentPatientSchemeGridView.Columns["description"].HeaderText = "Описание";
             currentPatientSchemeGridView.Columns["dose"].HeaderText = "Дозировка";
             currentPatientSchemeGridView.Columns["currentDose"].HeaderText = "Доза";
 
-            currentScheme = (schemeCMBX.SelectedItem as Scheme);
+            
 
             currentPatientSchemeGridView.Refresh();
         }
@@ -517,5 +519,39 @@ namespace OncoCalculatorCS
             if (doseReduction > 100) doseReduction = 100;
             doseReductionTBX.Text = doseReduction.ToString();
             }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Сбросить данные", " ", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                currentPatient = new Patient();
+                this.clearForm();
+                this.displayPatient(currentPatient);
+            }
+
+
+        }
+
+        private void clearForm()
+        {
+            nameTBX.Text = "";
+            weightTBX.Text = "0";
+            heightTBX.Text = "0";
+            creatininTBX.Text = "0";
+            ageTBX.Text = "0";
+            genderCMBX.ResetText();
+        }
+
+        private void displayPatient(Patient patient)
+        {
+
+            nameTBX.Text = currentPatient.name;
+            weightTBX.Text = currentPatient.weight.ToString();
+            heightTBX.Text = currentPatient.height.ToString();
+            ageTBX.Text = currentPatient.age.ToString();
+            if (currentPatient.gender == Patient.Gender.M) genderCMBX.SelectedIndex = 0;
+            if (currentPatient.gender == Patient.Gender.F) genderCMBX.SelectedIndex = 1;
+
+        }
     }
 }

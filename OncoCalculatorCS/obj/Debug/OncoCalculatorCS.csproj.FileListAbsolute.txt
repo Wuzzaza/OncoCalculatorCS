@@ -22,3 +22,4 @@ G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.exe
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.pdb
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache
+G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditPatients.resources

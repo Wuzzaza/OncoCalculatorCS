@@ -19,6 +19,7 @@ namespace OncoCalculatorCS.Classes
         public int age { get; set; }
         public Gender gender { get; set; }
         public Scheme scheme { get; set; }
+        public int doseReduction { get; set; }
 
 
     }

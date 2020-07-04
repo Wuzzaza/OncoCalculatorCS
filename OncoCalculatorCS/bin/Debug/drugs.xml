@@ -7,4 +7,11 @@
     <calculationMethod>BSA</calculationMethod>
     <currentDose>0</currentDose>
   </Drug>
+  <Drug>
+    <name>sdfsdfsdf</name>
+    <description />
+    <dose>25</dose>
+    <calculationMethod>PER_KG</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
 </ArrayOfDrug>
