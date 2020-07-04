@@ -34,7 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.newPatientBTN = new System.Windows.Forms.Button();
             this.saveBTN = new System.Windows.Forms.Button();
             this.patientBTN = new System.Windows.Forms.Button();
             this.doseReductionTBX = new System.Windows.Forms.TextBox();
@@ -92,7 +92,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.newPatientBTN);
             this.tabPage1.Controls.Add(this.saveBTN);
             this.tabPage1.Controls.Add(this.patientBTN);
             this.tabPage1.Controls.Add(this.doseReductionTBX);
@@ -123,40 +123,42 @@
             this.tabPage1.Text = "Пациент";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // newPatientBTN
             // 
-            this.button3.Location = new System.Drawing.Point(454, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(59, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Новый";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.newPatientBTN.Location = new System.Drawing.Point(543, 3);
+            this.newPatientBTN.Name = "newPatientBTN";
+            this.newPatientBTN.Size = new System.Drawing.Size(71, 23);
+            this.newPatientBTN.TabIndex = 12;
+            this.newPatientBTN.Text = "Новый";
+            this.newPatientBTN.UseVisualStyleBackColor = true;
+            this.newPatientBTN.Click += new System.EventHandler(this.button3_Click);
             // 
             // saveBTN
             // 
-            this.saveBTN.Location = new System.Drawing.Point(389, 190);
+            this.saveBTN.Location = new System.Drawing.Point(466, 3);
             this.saveBTN.Name = "saveBTN";
-            this.saveBTN.Size = new System.Drawing.Size(75, 23);
+            this.saveBTN.Size = new System.Drawing.Size(71, 23);
             this.saveBTN.TabIndex = 12;
             this.saveBTN.Text = "Сохранить";
             this.saveBTN.UseVisualStyleBackColor = true;
+            this.saveBTN.Click += new System.EventHandler(this.saveBTN_Click);
             // 
             // patientBTN
             // 
             this.patientBTN.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.patientBTN.Location = new System.Drawing.Point(389, 2);
             this.patientBTN.Name = "patientBTN";
-            this.patientBTN.Size = new System.Drawing.Size(59, 24);
+            this.patientBTN.Size = new System.Drawing.Size(71, 24);
             this.patientBTN.TabIndex = 11;
             this.patientBTN.Text = "Открыть";
             this.patientBTN.UseVisualStyleBackColor = true;
+            this.patientBTN.Click += new System.EventHandler(this.patientBTN_Click);
             // 
             // doseReductionTBX
             // 
-            this.doseReductionTBX.Location = new System.Drawing.Point(645, 6);
+            this.doseReductionTBX.Location = new System.Drawing.Point(670, 58);
             this.doseReductionTBX.Name = "doseReductionTBX";
-            this.doseReductionTBX.Size = new System.Drawing.Size(100, 20);
+            this.doseReductionTBX.Size = new System.Drawing.Size(75, 20);
             this.doseReductionTBX.TabIndex = 10;
             this.doseReductionTBX.Text = "0";
             this.doseReductionTBX.Leave += new System.EventHandler(this.doseReductionTBX_Leave);
@@ -325,6 +327,7 @@
             this.nameTBX.Name = "nameTBX";
             this.nameTBX.Size = new System.Drawing.Size(248, 20);
             this.nameTBX.TabIndex = 0;
+            this.nameTBX.Leave += new System.EventHandler(this.nameTBX_Leave);
             // 
             // label9
             // 
@@ -338,7 +341,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(538, 13);
+            this.label8.Location = new System.Drawing.Point(563, 58);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 13);
             this.label8.TabIndex = 0;
@@ -524,7 +527,7 @@
         private System.Windows.Forms.TextBox doseReductionTBX;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button patientBTN;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button newPatientBTN;
         private System.Windows.Forms.Button saveBTN;
     }
 }

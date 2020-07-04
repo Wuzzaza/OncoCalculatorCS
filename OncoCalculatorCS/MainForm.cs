@@ -25,8 +25,8 @@ namespace OncoCalculatorCS
 
         private int selectedSchemeIndex;
         private int selectedDrugIndex;
-        private Scheme currentScheme;
-        private Patient currentPatient;
+        internal Scheme currentScheme;
+        internal Patient currentPatient;
         private int height;
         private int age;
         private int weight;
@@ -34,6 +34,7 @@ namespace OncoCalculatorCS
         private uint doseReduction = 0;
         private double BSA = 0d; // Body Surface Area
         private double GFR = 0d; // Glomerular Filtration Rate
+        internal bool currentPatientNotSavedFlag { get; set; }
 
         public MainForm()
         {
@@ -43,6 +44,7 @@ namespace OncoCalculatorCS
             patients = new BindingList<Patient>();
             currentScheme = new Scheme();
             currentPatient = new Patient();
+            currentPatientNotSavedFlag = true;
 
             patientBTN.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -368,6 +370,7 @@ namespace OncoCalculatorCS
                 this.heightTBX.BackColor = Color.White;
                 calculateBSA();
 
+                
             }
             else
             {
@@ -384,6 +387,7 @@ namespace OncoCalculatorCS
                 this.ageTBX.BackColor = Color.White;
                 calculateBSA();
                 calculateGFR();
+                
             }
             else
             {
@@ -400,6 +404,7 @@ namespace OncoCalculatorCS
                 this.weightTBX.BackColor = Color.White;
                 calculateBSA();
                 calculateGFR();
+                
             }
             else
             {
@@ -462,6 +467,7 @@ namespace OncoCalculatorCS
         private void genderCMBX_SelectedIndexChanged(object sender, EventArgs e)
         {
             calculateGFR();
+            
         }
 
         private void recalculateDoses()
@@ -509,6 +515,7 @@ namespace OncoCalculatorCS
             {
                 this.doseReductionTBX.BackColor = Color.White;
                 recalculateDoses();
+                
             }
             else
             {
@@ -527,6 +534,7 @@ namespace OncoCalculatorCS
                 currentPatient = new Patient();
                 this.clearForm();
                 this.displayPatient(currentPatient);
+                currentPatientNotSavedFlag = true;
             }
 
 
@@ -542,16 +550,62 @@ namespace OncoCalculatorCS
             genderCMBX.ResetText();
         }
 
-        private void displayPatient(Patient patient)
+        internal void displayPatient(Patient patient)
         {
 
             nameTBX.Text = currentPatient.name;
+
             weightTBX.Text = currentPatient.weight.ToString();
+            weight = currentPatient.weight;
+
             heightTBX.Text = currentPatient.height.ToString();
+            height = currentPatient.height;
+
             ageTBX.Text = currentPatient.age.ToString();
+            age = currentPatient.age;
+
+            doseReductionTBX.Text = currentPatient.doseReduction.ToString();
+            doseReduction = Convert.ToUInt32(currentPatient.doseReduction);
+
             if (currentPatient.gender == Patient.Gender.M) genderCMBX.SelectedIndex = 0;
             if (currentPatient.gender == Patient.Gender.F) genderCMBX.SelectedIndex = 1;
+            currentPatientSchemeGridView.DataSource = currentScheme.drugsList;
+            currentPatientSchemeGridView.Show();
+            if (currentPatient.scheme != null)
+            {
+                currentPatientSchemeGridView.Columns["name"].HeaderText = "Название";
+                currentPatientSchemeGridView.Columns["description"].HeaderText = "Описание";
+                currentPatientSchemeGridView.Columns["dose"].HeaderText = "Дозировка";
+                currentPatientSchemeGridView.Columns["currentDose"].HeaderText = "Доза";
+            }
 
+        }
+
+        private void patientBTN_Click(object sender, EventArgs e)
+        {
+            EditPatients editPatients = new EditPatients(patients, this);
+            editPatients.ShowDialog();
+        }
+
+        private void saveBTN_Click(object sender, EventArgs e)
+        {
+            currentPatient.name = nameTBX.Text;
+           
+            currentPatient.height = height;
+            currentPatient.age = age;
+            currentPatient.weight = weight;
+            currentPatient.doseReduction = Convert.ToInt32(doseReduction);
+            if (genderCMBX.SelectedIndex == 0) currentPatient.gender = Patient.Gender.M;
+            if (genderCMBX.SelectedIndex == 1) currentPatient.gender = Patient.Gender.F;
+            currentPatient.scheme = currentScheme.clone();
+
+
+            if (currentPatientNotSavedFlag) patients.Add(currentPatient);
+        }
+
+        private void nameTBX_Leave(object sender, EventArgs e)
+        {
+            
         }
     }
 }

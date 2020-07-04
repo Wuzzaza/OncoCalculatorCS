@@ -23,3 +23,16 @@ G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.exe
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.pdb
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache
 G:\Docs\GIT\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditPatients.resources
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe.config
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.pdb
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditDrug.resources
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditPatients.resources
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditScheme.resources
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.MainForm.resources
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Properties.Resources.resources
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.GenerateResource.cache
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csproj.CoreCompileInputs.cache
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.exe
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.pdb
+G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache

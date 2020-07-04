@@ -32,6 +32,11 @@ namespace OncoCalculatorCS.Classes
             return thisSchemeCopy;
         }
 
-        
+        public override string ToString()
+        {
+            return this.name;
+        }
     }
+
+    
 }
