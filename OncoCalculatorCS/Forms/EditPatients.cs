@@ -16,18 +16,19 @@ namespace OncoCalculatorCS.Forms
         private BindingList<Patient> patients;
         MainForm mainForm = null;
 
-        public EditPatients(BindingList<Patient> patients, MainForm mainForm)
+        public EditPatients(ref BindingList<Patient> patients, MainForm mainForm)
         {
-            this.patients = patients;
-            this.mainForm = mainForm;
             InitializeComponent();
-
+                     
             List<Patient> sortedList = patients.OrderBy(x => x.name).ToList();
             patients = new BindingList<Patient>(sortedList);
-            this.patients = new BindingList<Patient>(sortedList);
+
+            this.patients = patients;
+            this.mainForm = mainForm;
+
 
             patientsDataGridView.ReadOnly = true;
-            patientsDataGridView.DataSource = patients;
+            patientsDataGridView.DataSource = this.patients;
             patientsDataGridView.Columns["name"].HeaderText = "ФИО";
             patientsDataGridView.Columns["description"].HeaderText = "Описание";
             patientsDataGridView.Columns["scheme"].HeaderText = "Схема";
@@ -48,6 +49,14 @@ namespace OncoCalculatorCS.Forms
             mainForm.currentPatientNotSavedFlag = false;
             mainForm.displayPatient(mainForm.currentPatient);
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in patientsDataGridView.SelectedRows)
+            {
+                patientsDataGridView.Rows.RemoveAt(item.Index);
+            }
         }
     }
 }

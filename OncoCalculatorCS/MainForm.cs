@@ -583,7 +583,7 @@ namespace OncoCalculatorCS
 
         private void patientBTN_Click(object sender, EventArgs e)
         {
-            EditPatients editPatients = new EditPatients(patients, this);
+            EditPatients editPatients = new EditPatients(ref patients, this);
             editPatients.ShowDialog();
         }
 
@@ -601,6 +601,8 @@ namespace OncoCalculatorCS
 
 
             if (currentPatientNotSavedFlag) patients.Add(currentPatient);
+            currentPatientNotSavedFlag = false;
+
         }
 
         private void nameTBX_Leave(object sender, EventArgs e)
