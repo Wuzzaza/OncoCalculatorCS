@@ -8,8 +8,6 @@ using System.Xml.Serialization;
 using OncoCalculatorCS.Classes;
 using OncoCalculatorCS.Forms;
 using System.Drawing.Printing;
-using System.Web;
-using System.Xml;
 using System.Text;
 
 namespace OncoCalculatorCS
