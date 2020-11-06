@@ -30,6 +30,7 @@
         {
             this.patientsDataGridView = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.searchTBX = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +57,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // searchTBX
+            // 
+            this.searchTBX.Location = new System.Drawing.Point(13, 13);
+            this.searchTBX.Name = "searchTBX";
+            this.searchTBX.Size = new System.Drawing.Size(456, 20);
+            this.searchTBX.TabIndex = 2;
+            this.searchTBX.TextChanged += new System.EventHandler(this.searchTBX_TextChanged);
+            // 
             // EditPatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.searchTBX);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.patientsDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -69,6 +79,7 @@
             this.Text = "Список Пациентов";
             ((System.ComponentModel.ISupportInitialize)(this.patientsDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -76,5 +87,6 @@
 
         private System.Windows.Forms.DataGridView patientsDataGridView;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox searchTBX;
     }
 }

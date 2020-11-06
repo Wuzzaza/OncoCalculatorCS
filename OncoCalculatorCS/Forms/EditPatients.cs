@@ -14,6 +14,7 @@ namespace OncoCalculatorCS.Forms
     public partial class EditPatients : Form
     {
         private BindingList<Patient> patients;
+        private BindingList<Patient> filteredPatients;
         MainForm mainForm = null;
 
         public EditPatients(ref BindingList<Patient> patients, MainForm mainForm)
@@ -25,10 +26,11 @@ namespace OncoCalculatorCS.Forms
 
             this.patients = patients;
             this.mainForm = mainForm;
+            this.filteredPatients = this.patients;
 
 
             patientsDataGridView.ReadOnly = true;
-            patientsDataGridView.DataSource = this.patients;
+            patientsDataGridView.DataSource = this.filteredPatients;
             patientsDataGridView.Columns["name"].HeaderText = "ФИО";
             patientsDataGridView.Columns["description"].HeaderText = "Описание";
             patientsDataGridView.Columns["scheme"].HeaderText = "Схема";
@@ -57,6 +59,26 @@ namespace OncoCalculatorCS.Forms
             {
                 patientsDataGridView.Rows.RemoveAt(item.Index);
             }
+        }
+
+        private void searchTBX_TextChanged(object sender, EventArgs e)
+        {
+            List<Patient> sortedList = this.patients.Where(x => x.name.StartsWith((searchTBX.Text.ToString()),StringComparison.InvariantCultureIgnoreCase)).ToList();
+
+            this.filteredPatients = new BindingList<Patient>(sortedList); ;
+
+            patientsDataGridView.ReadOnly = true;
+            patientsDataGridView.DataSource = this.filteredPatients;
+            patientsDataGridView.Columns["name"].HeaderText = "ФИО";
+            patientsDataGridView.Columns["description"].HeaderText = "Описание";
+            patientsDataGridView.Columns["scheme"].HeaderText = "Схема";
+            patientsDataGridView.Columns["name"].Width = 200;
+            patientsDataGridView.Columns["weight"].Visible = false;
+            patientsDataGridView.Columns["height"].Visible = false;
+            patientsDataGridView.Columns["age"].Visible = false;
+            patientsDataGridView.Columns["doseReduction"].Visible = false;
+            patientsDataGridView.Columns["gender"].Visible = false;
+            patientsDataGridView.Refresh();
         }
     }
 }
