@@ -46,8 +46,8 @@ namespace OncoCalculatorCS.Forms
 
         private void patientsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            mainForm.currentPatient = patients[(sender as DataGridView).CurrentRow.Index];
-            mainForm.currentScheme = patients[(sender as DataGridView).CurrentRow.Index].scheme;
+            mainForm.currentPatient = filteredPatients[(sender as DataGridView).CurrentRow.Index];
+            mainForm.currentScheme = filteredPatients[(sender as DataGridView).CurrentRow.Index].scheme;
             mainForm.currentPatientNotSavedFlag = false;
             mainForm.displayPatient(mainForm.currentPatient);
             this.Close();
