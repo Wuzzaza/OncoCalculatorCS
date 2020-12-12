@@ -173,6 +173,7 @@
             this.Controls.Add(this.nameTBX);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "EditDrug";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

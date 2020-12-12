@@ -74,6 +74,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.patientsDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "EditPatients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список Пациентов";

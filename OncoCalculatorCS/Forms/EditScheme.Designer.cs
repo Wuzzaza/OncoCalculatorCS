@@ -150,6 +150,7 @@
             this.Controls.Add(this.drugsGridView);
             this.Controls.Add(this.currentSchemeDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "EditScheme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditScheme";
