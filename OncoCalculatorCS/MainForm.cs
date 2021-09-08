@@ -110,9 +110,6 @@ namespace OncoCalculatorCS
                 schemesDataGridView.ReadOnly = true;
                 schemesDataGridView.AllowUserToResizeColumns = false;
 
-                schemeCMBX.DataSource = schemes;
-                schemeCMBX.DisplayMember = "name";
-
                 currentPatientSchemeGridView.DataSource = currentScheme.drugsList;
 
                 currentPatientSchemeGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -202,10 +199,6 @@ namespace OncoCalculatorCS
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            schemeCMBX.DataSource = schemes;
-            schemeCMBX.DisplayMember = "name";
-
-            this.schemeCMBX.Refresh();
             this.schemesDataGridView.Refresh();
             this.drugsDataGridView.Refresh();
         }
@@ -234,7 +227,6 @@ namespace OncoCalculatorCS
 
         private void schemeCMBX_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentScheme = (schemeCMBX.SelectedItem as Scheme).clone();
 
             currentPatientSchemeGridView.DataSource = currentScheme.drugsList;
             currentPatientSchemeGridView.Columns["name"].HeaderText = "Название";
@@ -608,6 +600,12 @@ namespace OncoCalculatorCS
         private void nameTBX_Leave(object sender, EventArgs e)
         {
             
+        }
+
+        private void selectSchemeBTN_Click(object sender, EventArgs e)
+        {
+            SelectScheme selectScheme = new SelectScheme(ref schemes, ref currentScheme, this);
+            selectScheme.ShowDialog();
         }
     }
 }

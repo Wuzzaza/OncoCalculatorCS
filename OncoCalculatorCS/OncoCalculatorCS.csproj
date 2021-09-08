@@ -70,6 +70,12 @@
     <Compile Include="Forms\EditScheme.Designer.cs">
       <DependentUpon>EditScheme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SelectScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectScheme.Designer.cs">
+      <DependentUpon>SelectScheme.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditScheme.resx">
       <DependentUpon>EditScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectScheme.resx">
+      <DependentUpon>SelectScheme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

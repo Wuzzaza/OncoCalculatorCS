@@ -41,7 +41,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.printBTN = new System.Windows.Forms.Button();
             this.currentPatientSchemeGridView = new System.Windows.Forms.DataGridView();
-            this.schemeCMBX = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.genderCMBX = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,7 +66,9 @@
             this.drugsDataGridView = new System.Windows.Forms.DataGridView();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.selectSchemeBTN = new System.Windows.Forms.Button();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schemeNameTBX = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentPatientSchemeGridView)).BeginInit();
@@ -92,6 +93,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.schemeNameTBX);
+            this.tabPage1.Controls.Add(this.selectSchemeBTN);
             this.tabPage1.Controls.Add(this.newPatientBTN);
             this.tabPage1.Controls.Add(this.saveBTN);
             this.tabPage1.Controls.Add(this.patientBTN);
@@ -99,7 +102,6 @@
             this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.printBTN);
             this.tabPage1.Controls.Add(this.currentPatientSchemeGridView);
-            this.tabPage1.Controls.Add(this.schemeCMBX);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.genderCMBX);
             this.tabPage1.Controls.Add(this.label5);
@@ -209,15 +211,6 @@
             this.currentPatientSchemeGridView.Size = new System.Drawing.Size(734, 287);
             this.currentPatientSchemeGridView.TabIndex = 9;
             this.currentPatientSchemeGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.currentPatientSchemeGridView_CellEndEdit);
-            // 
-            // schemeCMBX
-            // 
-            this.schemeCMBX.FormattingEnabled = true;
-            this.schemeCMBX.Location = new System.Drawing.Point(135, 190);
-            this.schemeCMBX.Name = "schemeCMBX";
-            this.schemeCMBX.Size = new System.Drawing.Size(248, 21);
-            this.schemeCMBX.TabIndex = 7;
-            this.schemeCMBX.SelectedIndexChanged += new System.EventHandler(this.schemeCMBX_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -462,9 +455,26 @@
             this.printPreviewDialog.UseAntiAlias = true;
             this.printPreviewDialog.Visible = false;
             // 
+            // selectSchemeBTN
+            // 
+            this.selectSchemeBTN.Location = new System.Drawing.Point(390, 190);
+            this.selectSchemeBTN.Name = "selectSchemeBTN";
+            this.selectSchemeBTN.Size = new System.Drawing.Size(75, 23);
+            this.selectSchemeBTN.TabIndex = 13;
+            this.selectSchemeBTN.Text = "Поиск";
+            this.selectSchemeBTN.UseVisualStyleBackColor = true;
+            this.selectSchemeBTN.Click += new System.EventHandler(this.selectSchemeBTN_Click);
+            // 
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(OncoCalculatorCS.MainForm);
+            // 
+            // schemeNameTBX
+            // 
+            this.schemeNameTBX.Location = new System.Drawing.Point(135, 191);
+            this.schemeNameTBX.Name = "schemeNameTBX";
+            this.schemeNameTBX.Size = new System.Drawing.Size(248, 20);
+            this.schemeNameTBX.TabIndex = 14;
             // 
             // MainForm
             // 
@@ -507,7 +517,6 @@
         private System.Windows.Forms.TextBox nameTBX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ComboBox schemeCMBX;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView drugsDataGridView;
@@ -530,6 +539,8 @@
         private System.Windows.Forms.Button patientBTN;
         private System.Windows.Forms.Button newPatientBTN;
         private System.Windows.Forms.Button saveBTN;
+        private System.Windows.Forms.Button selectSchemeBTN;
+        public System.Windows.Forms.TextBox schemeNameTBX;
     }
 }
 

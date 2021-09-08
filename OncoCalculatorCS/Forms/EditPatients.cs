@@ -48,6 +48,7 @@ namespace OncoCalculatorCS.Forms
         {
             mainForm.currentPatient = filteredPatients[(sender as DataGridView).CurrentRow.Index];
             mainForm.currentScheme = filteredPatients[(sender as DataGridView).CurrentRow.Index].scheme;
+            mainForm.schemeNameTBX.Text = filteredPatients[(sender as DataGridView).CurrentRow.Index].scheme.ToString();
             mainForm.currentPatientNotSavedFlag = false;
             mainForm.displayPatient(mainForm.currentPatient);
             this.Close();
@@ -65,7 +66,7 @@ namespace OncoCalculatorCS.Forms
         {
             List<Patient> sortedList = this.patients.Where(x => x.name.StartsWith((searchTBX.Text.ToString()),StringComparison.InvariantCultureIgnoreCase)).ToList();
 
-            this.filteredPatients = new BindingList<Patient>(sortedList); ;
+            this.filteredPatients = new BindingList<Patient>(sortedList); 
 
             patientsDataGridView.ReadOnly = true;
             patientsDataGridView.DataSource = this.filteredPatients;

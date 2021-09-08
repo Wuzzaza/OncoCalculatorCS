@@ -35,13 +35,20 @@
     <age>0</age>
     <gender>M</gender>
     <scheme>
-      <name>asdasdasd</name>
+      <name>ываыва</name>
       <intervalInDays>0</intervalInDays>
       <drugsList>
         <Drug>
           <name>sdfsdfsdfsdf</name>
           <description />
-          <dose>1.1</dose>
+          <dose>0</dose>
+          <calculationMethod>BSA</calculationMethod>
+          <currentDose>0</currentDose>
+        </Drug>
+        <Drug>
+          <name>sdfsdfsdfsdf</name>
+          <description />
+          <dose>0</dose>
           <calculationMethod>BSA</calculationMethod>
           <currentDose>0</currentDose>
         </Drug>
