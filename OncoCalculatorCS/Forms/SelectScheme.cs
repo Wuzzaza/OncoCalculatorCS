@@ -31,6 +31,12 @@ namespace OncoCalculatorCS.Forms
             schemeDataGridView.ReadOnly = true;
             schemeDataGridView.DataSource = this.filteredSchemes;
 
+            schemeDataGridView.ReadOnly = true;
+            schemeDataGridView.DataSource = this.filteredSchemes;
+            schemeDataGridView.Columns["name"].HeaderText = "Название";
+            schemeDataGridView.Columns["intervalInDays"].HeaderText = "Интервал";
+            schemeDataGridView.Columns["name"].Width = 300;
+
         }
 
         private void searchSchemeTBX_TextChanged(object sender, EventArgs e)
@@ -41,6 +47,10 @@ namespace OncoCalculatorCS.Forms
 
             schemeDataGridView.ReadOnly = true;
             schemeDataGridView.DataSource = this.filteredSchemes;
+            schemeDataGridView.Columns["name"].HeaderText = "Название";
+            schemeDataGridView.Columns["intervalInDays"].HeaderText = "Интервал";
+            schemeDataGridView.Columns["name"].Width = 300;
+            
         }
 
         private void schemeDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
