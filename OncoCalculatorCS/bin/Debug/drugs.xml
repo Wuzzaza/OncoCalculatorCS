@@ -1,17 +1,101 @@
 <?xml version="1.0"?>
 <ArrayOfDrug xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Drug>
-    <name>sdfsdfsdfsdf</name>
+    <name>Доксорубицин</name>
+    <description />
+    <dose>20</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>иринотекан</name>
+    <description />
+    <dose>180</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Бевацизумаб</name>
+    <description />
+    <dose>5</dose>
+    <calculationMethod>PER_KG</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Пеметрексед</name>
+    <description />
+    <dose>500</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Цисплатин</name>
+    <description />
+    <dose>50</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>блеомицин</name>
+    <description />
+    <dose>15</dose>
+    <calculationMethod>FIXED</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Фторурацил</name>
     <description />
     <dose>0</dose>
     <calculationMethod>BSA</calculationMethod>
     <currentDose>0</currentDose>
   </Drug>
   <Drug>
-    <name>sdfsdfsdf</name>
+    <name>Лейковорин</name>
     <description />
-    <dose>25</dose>
+    <dose>0</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Оксалиплатин</name>
+    <description />
+    <dose>0</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Трастузумаб</name>
+    <description />
+    <dose>8</dose>
     <calculationMethod>PER_KG</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Панитумумаб</name>
+    <description />
+    <dose>6</dose>
+    <calculationMethod>PER_KG</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Доцетаксел</name>
+    <description />
+    <dose>50</dose>
+    <calculationMethod>BSA</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Карбоплатин</name>
+    <description />
+    <dose>6</dose>
+    <calculationMethod>AUC</calculationMethod>
+    <currentDose>0</currentDose>
+  </Drug>
+  <Drug>
+    <name>Циклофосфамид</name>
+    <description />
+    <dose>0</dose>
+    <calculationMethod>BSA</calculationMethod>
     <currentDose>0</currentDose>
   </Drug>
 </ArrayOfDrug>

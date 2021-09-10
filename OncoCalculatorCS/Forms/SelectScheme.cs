@@ -41,8 +41,11 @@ namespace OncoCalculatorCS.Forms
 
         private void searchSchemeTBX_TextChanged(object sender, EventArgs e)
         {
-            
-            List<Scheme> sortedList = this.schemes.Where(x => x.name.ToLower().Contains((searchSchemeTBX.Text.ToString()).ToLower())).ToList();
+
+            string searchText = searchSchemeTBX.Text.ToString().ToLower();
+            List<Scheme> sortedList = this.schemes.Where(x => x.drugsList.Any(a => a?.name?.ToLower().Contains(searchText) == true)
+                                                                                || x.name.ToLower().Contains(searchText)).ToList();
+
             this.filteredSchemes = new BindingList<Scheme>(sortedList);
 
             schemeDataGridView.ReadOnly = true;

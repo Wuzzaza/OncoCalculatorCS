@@ -36,6 +36,16 @@ namespace OncoCalculatorCS.Classes
         {
             return this.name;
         }
+
+        public string drugListText()
+        {
+            StringBuilder text = new StringBuilder(name);
+            foreach (Drug drug in drugsList)
+            {
+                text.Append(drug.name);
+            } 
+            return text.ToString();
+        }
     }
 
     

@@ -39,6 +39,7 @@ G:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\Onco
 D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe.config
 D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.exe
 D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\bin\Debug\OncoCalculatorCS.pdb
+D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.csprojAssemblyReference.cache
 D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditDrug.resources
 D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditPatients.resources
 D:\VS_Projects\OncoCalculatorCS\OncoCalculatorCS\OncoCalculatorCS\obj\Debug\OncoCalculatorCS.Forms.EditScheme.resources

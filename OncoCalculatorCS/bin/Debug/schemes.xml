@@ -1,49 +1,2132 @@
 <?xml version="1.0"?>
 <ArrayOfScheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Scheme>
-    <name>asdasdasd</name>
+    <name>AI</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description>за 72 часа</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>150</currentDose>
+      </Drug>
+      <Drug>
+        <name>Ифосфан</name>
+        <description>1-4 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>5000</currentDose>
+      </Drug>
+      <Drug>
+        <name>Месна</name>
+        <description>1-4</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>6000</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>BEP</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Блеомицин</name>
+        <description>1, 3, 5 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>30</currentDose>
+      </Drug>
+      <Drug>
+        <name>Этопозид</name>
+        <description>1-5 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>193</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description>1-5 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>39</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>CAP</name>
     <intervalInDays>0</intervalInDays>
     <drugsList>
       <Drug>
-        <name>sdfsdfsdfsdf</name>
+        <name>Циклофосфамид</name>
         <description />
-        <dose>1.1</dose>
+        <dose>500</dose>
         <calculationMethod>BSA</calculationMethod>
         <currentDose>0</currentDose>
       </Drug>
       <Drug>
-        <name>sdfsdfsdf</name>
+        <name>Доксорубицин</name>
         <description />
-        <dose>25</dose>
+        <dose>50</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>50</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>CAV</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>циклофосфамид</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1495</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>75</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>DC</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>834</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>150</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>DC</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>149</currentDose>
+      </Drug>
+      <Drug>
+        <name>Циклофосфан</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1191</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>DCF</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>142</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>142</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1900</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>DeGramon + Bev</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>2400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>DeGramont</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>2400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>EC</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Этопозид</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>190</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>ELF</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Этопозид</name>
+        <description>1-3 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>231</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description>1-3 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>96</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description>1-3 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>963</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FLOT</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>50</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>85</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>200</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>2600</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFIRI</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>279</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>619</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>619</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3717</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFIRI-3</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description>1, 3 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>168</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>748</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description>с 1 дня за 46 часов</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3742</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFIRINOX</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>150</currentDose>
+      </Drug>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>317</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>704</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>4224</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>704</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFOX-4</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>85</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>200</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>600</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFOX-6</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>80</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>2400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>FOLFOX-6+Bev</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>2400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Оксалиплатин </name>
+        <description />
+        <dose>80</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>5</dose>
         <calculationMethod>PER_KG</calculationMethod>
         <currentDose>0</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
   <Scheme>
-    <name>ываыва</name>
+    <name>GemCap</name>
+    <intervalInDays>28</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1897</currentDose>
+      </Drug>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2371</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemCarbo</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин </name>
+        <description>1,8 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1833</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemCarbo</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1980</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemCarbo+Bev</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description />
+        <dose>1000</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>4</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemCis</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2000</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>150</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemOX</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>211</currentDose>
+      </Drug>
+      <Drug>
+        <name>Гемцитабин </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1626</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemTax</name>
     <intervalInDays>0</intervalInDays>
     <drugsList>
       <Drug>
-        <name>sdfsdfsdfsdf</name>
+        <name>Гемцитабин</name>
         <description />
         <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1594</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>177</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GemTax (редукция дозы 25%)</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description>1-8 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1233</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description>8 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>137</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>GP</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1683</currentDose>
+      </Drug>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>252</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>IRIBEV</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>иринотекан</name>
+        <description />
+        <dose>180</dose>
         <calculationMethod>BSA</calculationMethod>
         <currentDose>0</currentDose>
       </Drug>
       <Drug>
-        <name>sdfsdfsdfsdf</name>
+        <name>бевацизумаб</name>
         <description />
-        <dose>0</dose>
-        <calculationMethod>BSA</calculationMethod>
-        <currentDose>0</currentDose>
-      </Drug>
-      <Drug>
-        <name>sdfsdfsdf</name>
-        <description />
-        <dose>25</dose>
+        <dose>5</dose>
         <calculationMethod>PER_KG</calculationMethod>
         <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>MAID</name>
+    <intervalInDays>3</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Месна</name>
+        <description>1-4</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3721</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доксорубицин</name>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>112</currentDose>
+      </Drug>
+      <Drug>
+        <name>Ифосфамид</name>
+        <description>1-3 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3721</currentDose>
+      </Drug>
+      <Drug>
+        <name>Дакарбазин </name>
+        <description>растворен вместе с доксорубицином</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1674</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>mDCF</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Фторурацил</name>
+        <description>1й день струйно</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>642</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>642</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>64</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>64</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description>1-2 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3211</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>mDCF</name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел </name>
+        <description />
+        <dose>40</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин </name>
+        <description />
+        <dose>40</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>фторурацил</name>
+        <description />
+        <dose>2000</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>фторурацил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>mFOLFOX-6</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин </name>
+        <description />
+        <dose>85</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Лейковорин</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>2400</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>PC+Bev</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>6</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Паклитаксел </name>
+        <description />
+        <dose>175</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>15</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>PF</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>140</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1864</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>TPF</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>146</currentDose>
+      </Drug>
+      <Drug>
+        <name>цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>146</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурцаил</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1940</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>XELIRI</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>360</currentDose>
+      </Drug>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3244</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>XELIRI+Bev</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>200</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>капецитабин </name>
+        <description />
+        <dose>1600</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>7.5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>XELOX</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>260</currentDose>
+      </Drug>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>4000</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>XELOX (редукция дозы на 25 %)</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>181</currentDose>
+      </Drug>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1812</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>АС</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>117</currentDose>
+      </Drug>
+      <Drug>
+        <name>Циклофосфан</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1170</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Бевацизумаб</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>7.5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Винорелбин + карбоплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Винорельбин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>41</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>382</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Винорелбин+карбоплатин </name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Винорелбин</name>
+        <description>1,8 дни</description>
+        <dose>25</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Винорельбин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Винорельбин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>45</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Винорельбин+цисплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>140</currentDose>
+      </Drug>
+      <Drug>
+        <name>Винорельбин</name>
+        <description>1й и 8й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>56</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Гемцитабин</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1767</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>гемцитабин+карбоплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description>1,8 день</description>
+        <dose>1000</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Дакарбазин</name>
+    <intervalInDays>28</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Дакарбазин </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1563</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доксорубицин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>20</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доксорубицин + блеомицин + цисплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>50</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Блеомицин</name>
+        <description />
+        <dose>15</dose>
+        <calculationMethod>FIXED</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>20</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доксорубицин + Цисплатин</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>20</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>50</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доксорубицин + цисплатин + филграстим</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description>за 96 часов</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>180</currentDose>
+      </Drug>
+      <Drug>
+        <name>цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>240</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>доксорубицин+блеомицин+винкристин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Винкристин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Блеомицин</name>
+        <description>10мг</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>10</currentDose>
+      </Drug>
+      <Drug>
+        <name>Дксорубицин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>93</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>доксорубицин+карбоплатин </name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>71</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>444</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>доксорубицин+цисплатин </name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>120</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>80</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>доксорубицин+цисплатин+блеомицин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доксорубицин</name>
+        <description />
+        <dose>50</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>20</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>блеомицин</name>
+        <description />
+        <dose>15</dose>
+        <calculationMethod>FIXED</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доцетаксел</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>142</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доцетаксел + Бевацизумаб</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>75</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>7.5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доцетаксел + карбоплатин + трастузумаб</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>132</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Трастузумаб </name>
+        <description />
+        <dose>6</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>доцетаксел+трастузумаб</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел </name>
+        <description />
+        <dose>75</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Трастузумаб </name>
+        <description />
+        <dose>8</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Доцетаксел+цисплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>133</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>133</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>ЕР</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>132</currentDose>
+      </Drug>
+      <Drug>
+        <name>Этопозид</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>176</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Иринотекан</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>370</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Иринотекан + бевацизумаб</name>
+    <intervalInDays>28</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>360</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description>5 мг на кг массы</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>320</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Иринотекан + капецитабин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>иринотекан</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>390</currentDose>
+      </Drug>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1855</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Иринотекан + Карбоплатин</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description>1 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>230</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>487</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Иринотекан + Панитумумаб</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>180</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Панитумумаб</name>
+        <description />
+        <dose>6</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>иринотекан +бевацизумаб </name>
+    <intervalInDays>14</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <description />
+        <dose>200</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Иринотекан+гемцитабин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Иринотекан</name>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>293</currentDose>
+      </Drug>
+      <Drug>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1718</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>иринотекан+карбоплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>иринотекан</name>
+        <description>1,8</description>
+        <dose>65</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description>1</description>
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Ифосфамид</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Ифосфамид</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2234</currentDose>
+      </Drug>
+      <Drug>
+        <name>Месна </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2680</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Капецитабин</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>3404</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>капецитабин+бев</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>капецитабин </name>
+        <description />
+        <dose>2000</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>бевацизумаб</name>
+        <description />
+        <dose>7.5</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Карбоплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>453</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Карбоплатин + фторурацил</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Фторурацил</name>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1747</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>630</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>митоксантрон</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Митоксантрон </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>17</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>оксалиплатин </name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Оксалиплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>260</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Паклитаксел</name>
+    <intervalInDays>7</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description>0</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>160</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>паклитаксел + карбоплатин</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>288</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>464</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Паклитаксел + цисплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>307</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>132</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Паклитаксел+бевацизумаб</name>
+    <intervalInDays>28</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description />
+        <dose>10</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <dose>80</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Паклитаксел+Гемзар</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>288</currentDose>
+      </Drug>
+      <Drug>
+        <name>Гемцитабин </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>4801</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Панитумумаб</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Панитумумаб</name>
+        <description />
+        <dose>6</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Пеметрексед</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Пеметрексед</name>
+        <description />
+        <dose>500</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Пеметрексед + карбоплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Пеметрексед </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1000</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Пеметрексед + цисплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Пеметрексед</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>687</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>103</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>РС</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел </name>
+        <description />
+        <dose>175</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>РС + бевацизумаб</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Паклитаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>350</currentDose>
+      </Drug>
+      <Drug>
+        <name>Бевацизумаб</name>
+        <description>7,5мг на кг</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>топотекан+карбоплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Карбоплатин</name>
+        <description />
+        <dose>5</dose>
+        <calculationMethod>AUC</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+      <Drug>
+        <name>Топотекан </name>
+        <description />
+        <dose>0.75</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Трастузумаб</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Трастузумаб </name>
+        <description />
+        <dose>6</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Трастузумаб</name>
+    <intervalInDays>0</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Трастузумаб</name>
+        <description />
+        <dose>6</dose>
+        <calculationMethod>PER_KG</calculationMethod>
+        <currentDose>0</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Цисплатин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>143</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Цисплатин + Гемцитабин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Гемцитабин</name>
+        <description>1,8 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1470</currentDose>
+      </Drug>
+      <Drug>
+        <name>Цисплатин</name>
+        <description>1,8 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>59</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>цисплатин + ифосфамид + месна</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>цисплатин</name>
+        <description>1-5 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>36</currentDose>
+      </Drug>
+      <Drug>
+        <name>Ифосфамид</name>
+        <description>1-5 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2687</currentDose>
+      </Drug>
+      <Drug>
+        <name>Месна </name>
+        <description>1-5 день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2687</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>цисплатин + фторурацил</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>138</currentDose>
+      </Drug>
+      <Drug>
+        <name>Фторурацил</name>
+        <description>1-4 дни</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1836</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>цисплатин+капецитабин</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Цисплатин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>105</currentDose>
+      </Drug>
+      <Drug>
+        <name>Капецитабин</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>2619</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Эпирубицин + циклофосфан</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Эпирубицин </name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>132</currentDose>
+      </Drug>
+      <Drug>
+        <name>Циклофосфан</name>
+        <description>1й день</description>
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>1060</currentDose>
+      </Drug>
+    </drugsList>
+  </Scheme>
+  <Scheme>
+    <name>Эпирубицин+доцетаксел</name>
+    <intervalInDays>21</intervalInDays>
+    <drugsList>
+      <Drug>
+        <name>Эпирубицин </name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>124</currentDose>
+      </Drug>
+      <Drug>
+        <name>Доцетаксел</name>
+        <description />
+        <dose>0</dose>
+        <calculationMethod>BSA</calculationMethod>
+        <currentDose>124</currentDose>
       </Drug>
     </drugsList>
   </Scheme>
